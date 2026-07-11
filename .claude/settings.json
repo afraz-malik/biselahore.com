@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e \"const fm = require\\('framer-motion'\\); console.log\\(typeof fm.useInView, typeof fm.animate, typeof fm.useMotionValue\\);\")"
+    ]
+  }
+}
