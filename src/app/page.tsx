@@ -25,8 +25,8 @@ export default function Home() {
           title="News & Community"
           description="Recent notices, plus a word from the Chairman and how to stay in touch."
         />
-        <div className="mt-10 grid gap-8 lg:grid-cols-[1.6fr_1fr]">
-          <div className="flex flex-col gap-6">
+        <div className="mt-12 grid gap-9 lg:grid-cols-[1.6fr_1fr]">
+          <div className="flex flex-col gap-7">
             <NewsPreview />
             <ChairmanMessage />
           </div>

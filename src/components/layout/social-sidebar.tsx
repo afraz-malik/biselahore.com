@@ -45,10 +45,10 @@ function SocialSidebarRow({ item }: { item: SocialSidebarItem }) {
   const inner = (
     <motion.div
       initial={false}
-      animate={{ width: active ? 216 : 44 }}
+      animate={{ width: active ? 232 : 48 }}
       transition={expandTransition}
       className={cn(
-        "flex h-11 items-center gap-0 overflow-hidden rounded-l-full pl-0 shadow-md transition-shadow duration-200",
+        "flex h-12 items-center gap-0 overflow-hidden rounded-l-full pl-0 shadow-md transition-shadow duration-200",
         item.colorClass,
         active && "shadow-xl",
       )}
@@ -57,9 +57,9 @@ function SocialSidebarRow({ item }: { item: SocialSidebarItem }) {
       <motion.span
         animate={{ scale: active ? 1.1 : 1 }}
         transition={{ type: "spring", stiffness: 320, damping: 20 }}
-        className="flex size-11 shrink-0 items-center justify-center text-white"
+        className="flex size-12 shrink-0 items-center justify-center text-white"
       >
-        <ItemIcon icon={item.icon} className="size-4.5" />
+        <ItemIcon icon={item.icon} className="size-5" />
       </motion.span>
       <motion.span
         animate={{ opacity: active ? 1 : 0 }}

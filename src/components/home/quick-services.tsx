@@ -37,7 +37,7 @@ export function QuickServices() {
         whileInView="show"
         viewport={{ once: true, margin: "-60px" }}
         variants={{ hidden: {}, show: { transition: { staggerChildren: 0.05 } } }}
-        className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4"
+        className="mt-12 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4"
       >
         {quickServiceCards.map((service) => (
           <motion.div

@@ -48,10 +48,10 @@ const iconMap: Record<UtilityAccessIcon, LucideIcon> = {
 };
 
 const chipClass =
-  "group flex items-center gap-2.5 rounded-full border border-border bg-card px-4 py-2.5 text-sm font-medium whitespace-nowrap shadow-sm transition-colors hover:border-primary/40 hover:bg-accent hover:text-accent-foreground";
+  "group flex items-center gap-3 rounded-full border border-border bg-card px-5 py-3 text-base font-medium whitespace-nowrap shadow-sm transition-colors hover:border-primary/40 hover:bg-accent hover:text-accent-foreground";
 
 function ChipIcon({ icon: Icon }: { icon: LucideIcon }) {
-  return <Icon className="size-4 text-primary" />;
+  return <Icon className="size-4.5 text-primary" />;
 }
 
 export function UtilityQuickAccess() {
@@ -67,7 +67,7 @@ export function UtilityQuickAccess() {
         whileInView="show"
         viewport={{ once: true, margin: "-60px" }}
         variants={{ hidden: {}, show: { transition: { staggerChildren: 0.03 } } }}
-        className="mt-8 flex flex-wrap gap-3"
+        className="mt-10 flex flex-wrap gap-3.5"
       >
         {utilityQuickAccess.map((item) => {
           const Icon = iconMap[item.icon];

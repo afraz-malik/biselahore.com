@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 export function MediaPanel() {
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-7">
       <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
         <div className="aspect-video w-full">
           <iframe
@@ -17,14 +17,14 @@ export function MediaPanel() {
             allowFullScreen
           />
         </div>
-        <div className="p-4">
-          <p className="text-sm font-semibold">Strict Ban on Guess Papers</p>
+        <div className="p-5">
+          <p className="text-base font-semibold">Strict Ban on Guess Papers</p>
         </div>
       </div>
 
-      <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
-        <p className="text-sm font-semibold">Model Papers</p>
-        <div className="mt-4 flex flex-col gap-2.5">
+      <div className="rounded-2xl border border-border bg-card p-7 shadow-sm">
+        <p className="text-base font-semibold">Model Papers</p>
+        <div className="mt-5 flex flex-col gap-3">
           <Button
             variant="secondary"
             className="justify-between"

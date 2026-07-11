@@ -2,10 +2,10 @@ import { Quote } from "lucide-react";
 
 export function ChairmanMessage() {
   return (
-    <div className="rounded-2xl border border-border bg-card p-6 shadow-sm sm:p-8">
-      <Quote className="size-8 text-primary/30" />
-      <h3 className="mt-3 text-lg font-semibold">Message from the Chairman</h3>
-      <div className="mt-4 space-y-4 text-sm text-muted-foreground text-pretty">
+    <div className="rounded-2xl border border-border bg-card p-7 shadow-sm sm:p-9">
+      <Quote className="size-9 text-primary/30" />
+      <h3 className="mt-4 text-xl font-semibold">Message from the Chairman</h3>
+      <div className="mt-5 space-y-4 text-base leading-relaxed text-muted-foreground text-pretty">
         <p>Dear Esteemed Students, Parents, and Teachers,</p>
         <p>
           I am highly delighted to extend my heartfelt welcome to you all. At
@@ -23,8 +23,8 @@ export function ChairmanMessage() {
           Transparent evaluation is our priority.
         </p>
       </div>
-      <div className="mt-6 border-t border-border pt-4">
-        <p className="text-sm font-semibold">Engr. Dr. Badar-ul-Islam</p>
+      <div className="mt-7 border-t border-border pt-5">
+        <p className="text-base font-semibold">Engr. Dr. Badar-ul-Islam</p>
         <p className="text-sm text-muted-foreground">Chairman, BISE Lahore</p>
       </div>
     </div>

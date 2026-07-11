@@ -22,7 +22,7 @@ export function Section({
 }: SectionProps) {
   return (
     <section
-      className={cn("py-16 md:py-24", backgroundStyles[background], className)}
+      className={cn("py-20 md:py-28 lg:py-32", backgroundStyles[background], className)}
       {...props}
     >
       <Container className={containerClassName}>{children}</Container>
