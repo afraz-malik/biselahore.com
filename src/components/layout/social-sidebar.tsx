@@ -5,7 +5,10 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Mail, Newspaper, Phone, type LucideIcon } from "lucide-react";
 
-import { SocialIcon, type SocialIconName } from "@/components/icons/social-icons";
+import {
+  SocialIcon,
+  type SocialIconName,
+} from "@/components/icons/social-icons";
 import {
   socialSidebarItems,
   type SocialSidebarItem,
@@ -27,7 +30,13 @@ const lucideIconMap: Record<"mail" | "phone" | "newspaper", LucideIcon> = {
   newspaper: Newspaper,
 };
 
-function ItemIcon({ icon, className }: { icon: SocialSidebarItem["icon"]; className?: string }) {
+function ItemIcon({
+  icon,
+  className,
+}: {
+  icon: SocialSidebarItem["icon"];
+  className?: string;
+}) {
   if ((brandIcons as string[]).includes(icon)) {
     return <SocialIcon name={icon as SocialIconName} className={className} />;
   }
@@ -35,7 +44,11 @@ function ItemIcon({ icon, className }: { icon: SocialSidebarItem["icon"]; classN
   return <Icon className={className} />;
 }
 
-const expandTransition = { type: "spring", duration: 0.3, bounce: 0.2 } as const;
+const expandTransition = {
+  type: "spring",
+  duration: 0.3,
+  bounce: 0.2,
+} as const;
 
 function SocialSidebarRow({ item }: { item: SocialSidebarItem }) {
   const [active, setActive] = useState(false);
@@ -66,16 +79,22 @@ function SocialSidebarRow({ item }: { item: SocialSidebarItem }) {
         transition={{ duration: 0.18, delay: active ? 0.05 : 0 }}
         className="flex min-w-0 flex-col justify-center gap-0 pr-4 whitespace-nowrap text-white"
       >
-        <span className="text-sm leading-tight font-semibold">{item.label}</span>
+        <span className="text-sm leading-tight font-semibold">
+          {item.label}
+        </span>
         {item.subtitle ? (
-          <span className="text-xs leading-tight text-white/85">{item.subtitle}</span>
+          <span className="text-xs leading-tight text-white/85">
+            {item.subtitle}
+          </span>
         ) : null}
       </motion.span>
     </motion.div>
   );
 
   const sharedProps = {
-    "aria-label": item.subtitle ? `${item.label}: ${item.subtitle}` : item.label,
+    "aria-label": item.subtitle
+      ? `${item.label}: ${item.subtitle}`
+      : item.label,
     onMouseEnter: () => setActive(true),
     onMouseLeave: () => setActive(false),
     onFocus: () => setActive(true),
