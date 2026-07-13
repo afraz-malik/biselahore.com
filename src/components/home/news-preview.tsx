@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 
 export function NewsPreview() {
   return (
-    <div className="rounded-2xl border border-border bg-card p-7 shadow-sm">
+    <div className="h-full rounded-2xl border border-border bg-card p-7 shadow-sm">
       <div className="flex items-center justify-between gap-4">
         <h3 className="text-xl font-semibold">Latest News</h3>
         <Link

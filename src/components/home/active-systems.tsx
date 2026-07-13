@@ -10,10 +10,10 @@ import { activeSystems } from "@/lib/home-data";
 
 export function ActiveSystems() {
   return (
-    <Section background="subtle">
+    <Section id="online-systems" background="accent" className="scroll-mt-24">
       <SectionHeading
         eyebrow="Student Services"
-        title="Online / Active Systems"
+        title="Online Systems"
         description="Live registration, roll-number slip and exam-management portals for the current session."
       />
       <motion.div

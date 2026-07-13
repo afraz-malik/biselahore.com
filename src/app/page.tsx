@@ -3,11 +3,9 @@ import { SectionHeading } from "@/components/layout/section-heading";
 import { Hero } from "@/components/home/hero";
 import { BiseAtAGlance } from "@/components/ui/bise-at-a-glance";
 import { QuickServices } from "@/components/home/quick-services";
-import { UtilityQuickAccess } from "@/components/home/utility-quick-access";
 import { ActiveSystems } from "@/components/home/active-systems";
 import { NewsPreview } from "@/components/home/news-preview";
-import { ChairmanMessage } from "@/components/home/chairman-message";
-import { MediaPanel } from "@/components/home/media-panel";
+import { FacebookFeed } from "@/components/home/facebook-feed";
 import { MapSection } from "@/components/home/map-section";
 import { RelatedLinks } from "@/components/home/related-links";
 
@@ -16,21 +14,17 @@ export default function Home() {
     <>
       <Hero />
       <QuickServices />
-      <UtilityQuickAccess />
       <ActiveSystems />
       <BiseAtAGlance />
       <Section>
         <SectionHeading
           eyebrow="Community"
-          title="News & Community"
-          description="Recent notices, plus a word from the Chairman and how to stay in touch."
+          title="Latest News"
+          description="Recent notices, tenders, and schedule updates from the Board."
         />
-        <div className="mt-12 grid gap-9 lg:grid-cols-[1.6fr_1fr]">
-          <div className="flex flex-col gap-7">
-            <NewsPreview />
-            <ChairmanMessage />
-          </div>
-          <MediaPanel />
+        <div className="mt-12 grid gap-7 lg:grid-cols-2">
+          <NewsPreview />
+          <FacebookFeed />
         </div>
       </Section>
 

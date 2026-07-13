@@ -39,7 +39,7 @@ export function QuickServices() {
         variants={{ hidden: {}, show: { transition: { staggerChildren: 0.05 } } }}
         className="mt-12 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4"
       >
-        {quickServiceCards.map((service) => (
+        {quickServiceCards.map((service, i) => (
           <motion.div
             key={service.title}
             variants={{ hidden: { opacity: 0, y: 14 }, show: { opacity: 1, y: 0 } }}
@@ -53,7 +53,12 @@ export function QuickServices() {
               rel={service.external ? "noopener noreferrer" : undefined}
               className="block h-full"
             >
-              <ServiceCard icon={iconMap[service.icon]} title={service.title} description={service.description} />
+              <ServiceCard
+                icon={iconMap[service.icon]}
+                title={service.title}
+                description={service.description}
+                tone={i % 2 === 0 ? "emerald" : "ink"}
+              />
             </Link>
           </motion.div>
         ))}

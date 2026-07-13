@@ -47,20 +47,20 @@ function StatCard({ stat }: { stat: GlanceStat }) {
   return (
     <motion.div
       variants={cardVariants}
-      whileHover={{ y: -6 }}
+      whileHover={{ y: -4 }}
       transition={{ type: "spring", stiffness: 300, damping: 22 }}
-      className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/6 p-7 shadow-lg shadow-black/20 backdrop-blur-xl transition-colors duration-300 hover:border-emerald-300/40 hover:bg-white/9 hover:shadow-2xl hover:shadow-emerald-500/10 sm:p-9"
+      className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/6 p-5 shadow-lg shadow-black/20 backdrop-blur-xl transition-colors duration-300 hover:border-emerald-300/40 hover:bg-white/9 hover:shadow-2xl hover:shadow-emerald-500/10"
     >
       <motion.span
         whileHover={{ scale: 1.1 }}
         transition={{ type: "spring", stiffness: 300, damping: 18 }}
-        className="inline-flex size-16 items-center justify-center rounded-2xl bg-emerald-400/10 text-emerald-300 ring-1 ring-emerald-300/20"
+        className="inline-flex size-11 items-center justify-center rounded-xl bg-emerald-400/10 text-emerald-300 ring-1 ring-emerald-300/20"
       >
-        <Icon className="size-8" />
+        <Icon className="size-5.5" />
       </motion.span>
 
       {stat.value !== undefined ? (
-        <p className="mt-7 text-4xl font-bold tracking-tight text-white sm:text-5xl">
+        <p className="mt-4 text-2xl font-bold tracking-tight text-white sm:text-3xl">
           <AnimatedCounter
             value={stat.value}
             decimals={stat.decimals}
@@ -75,18 +75,18 @@ function StatCard({ stat }: { stat: GlanceStat }) {
         initial={{ opacity: 0 }}
         animate={labelReady ? { opacity: 1 } : {}}
         transition={{ duration: 0.5 }}
-        className={cn(stat.value === undefined && "mt-7")}
+        className={cn(stat.value === undefined && "mt-4")}
       >
         <p
           className={cn(
             "font-semibold text-white text-pretty",
-            stat.value === undefined ? "text-2xl" : "mt-2 text-base",
+            stat.value === undefined ? "text-lg" : "mt-1 text-sm",
           )}
         >
           {stat.title}
         </p>
         {stat.subtitle ? (
-          <p className="mt-1.5 text-sm text-white/60 text-pretty">{stat.subtitle}</p>
+          <p className="mt-1 text-xs text-white/60 text-pretty">{stat.subtitle}</p>
         ) : null}
       </motion.div>
     </motion.div>
@@ -95,7 +95,7 @@ function StatCard({ stat }: { stat: GlanceStat }) {
 
 export function BiseAtAGlance() {
   return (
-    <section className="relative isolate overflow-hidden bg-[#071811] py-24 md:py-32">
+    <section className="relative isolate overflow-hidden bg-surface-brand py-20 md:py-24">
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-[radial-gradient(60%_50%_at_15%_0%,oklch(0.48_0.11_162/0.55)_0%,transparent_60%),radial-gradient(55%_60%_at_100%_100%,oklch(0.6_0.14_163/0.35)_0%,transparent_60%)]" />
         <div
@@ -129,7 +129,7 @@ export function BiseAtAGlance() {
           whileInView="show"
           viewport={{ once: true, margin: "-60px" }}
           variants={containerVariants}
-          className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-7 lg:grid-cols-4"
+          className="mt-10 grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-4"
         >
           {glanceStats.map((stat) => (
             <StatCard key={stat.title} stat={stat} />
