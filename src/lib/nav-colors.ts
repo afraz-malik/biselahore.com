@@ -10,6 +10,7 @@ export const navColorClasses: Record<NavColor, string> = {
   amber: "bg-amber-500/12 text-amber-600 dark:bg-amber-400/15 dark:text-amber-400",
   fuchsia: "bg-fuchsia-500/12 text-fuchsia-600 dark:bg-fuchsia-400/15 dark:text-fuchsia-400",
   blue: "bg-blue-500/12 text-blue-600 dark:bg-blue-400/15 dark:text-blue-400",
+  teal: "bg-teal-500/12 text-teal-600 dark:bg-teal-400/15 dark:text-teal-400",
 };
 
 /** Group → color for Quick Access mega menu section headings/tiles. */

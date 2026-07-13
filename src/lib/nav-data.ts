@@ -6,7 +6,8 @@ export type NavColor =
   | "cyan"
   | "amber"
   | "fuchsia"
-  | "blue";
+  | "blue"
+  | "teal";
 
 export type NavIconName =
   | "home"
@@ -18,7 +19,8 @@ export type NavIconName =
   | "map"
   | "zap"
   | "radio"
-  | "grid";
+  | "grid"
+  | "help";
 
 export interface NavLink {
   label: string;
@@ -52,12 +54,13 @@ export const primaryNav: (NavLink | NavGroup)[] = [
       { label: "CEs", href: "/deputationists/ces" },
     ],
   },
+  { label: "FAQs", href: "/faqs", icon: "help", color: "teal" },
   { label: "Sitemap", href: "/sitemap", icon: "map", color: "fuchsia" },
 ];
 
 /** Primary, always-visible nav links — the most-used destinations, surfaced directly. */
 export const quickNavLinks: NavLink[] = [
-  { label: "Quick Services", href: "#quick-services", icon: "zap", color: "amber" },
+  { label: "Services", href: "#quick-services", icon: "zap", color: "amber" },
   { label: "Online Systems", href: "#online-systems", icon: "radio", color: "emerald" },
 ];
 

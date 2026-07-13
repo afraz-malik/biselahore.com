@@ -29,20 +29,26 @@ export function QuickServices() {
     <Section id="quick-services" background="subtle" className="scroll-mt-24">
       <SectionHeading
         eyebrow="Explore"
-        title="Quick Services"
+        title="Services"
         description="E-services and record corrections — the most requested student actions, one click away."
       />
       <motion.div
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, margin: "-60px" }}
-        variants={{ hidden: {}, show: { transition: { staggerChildren: 0.05 } } }}
+        variants={{
+          hidden: {},
+          show: { transition: { staggerChildren: 0.05 } },
+        }}
         className="mt-12 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4"
       >
         {quickServiceCards.map((service, i) => (
           <motion.div
             key={service.title}
-            variants={{ hidden: { opacity: 0, y: 14 }, show: { opacity: 1, y: 0 } }}
+            variants={{
+              hidden: { opacity: 0, y: 14 },
+              show: { opacity: 1, y: 0 },
+            }}
             whileHover={{ y: -4 }}
             transition={{ type: "spring", stiffness: 300, damping: 22 }}
             className="h-full"
