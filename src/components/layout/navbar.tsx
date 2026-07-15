@@ -101,7 +101,7 @@ export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-border/70 bg-[linear-gradient(95deg,rgba(239,246,255,0.98)_0%,rgba(224,242,254,0.96)_38%,rgba(191,219,254,0.95)_100%)] shadow-[0_10px_35px_-20px_rgba(37,99,235,0.45)] backdrop-blur-md">
       <Container className="flex h-20 items-center justify-between gap-6 py-3 lg:h-24">
         <Link href="/" className="flex items-center gap-3.5 shrink-0">
           <Image
@@ -135,6 +135,7 @@ export function Navbar() {
               {item.label}
             </Button>
           ))}
+         
           <QuickAccessMenu />
         </nav>
 

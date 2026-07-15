@@ -28,6 +28,14 @@ export interface SocialSidebarItem {
  */
 export const socialSidebarItems: SocialSidebarItem[] = [
   {
+    key: "live-support",
+    label: "Live Support",
+    subtitle: "Chat with us",
+    href: "https://chatbot.biselahore.com",
+    icon: "phone",
+    colorClass: "bg-cyan-700",
+  },
+  {
     key: "whatsapp",
     label: "WhatsApp",
     subtitle: "Live Admission Support",
@@ -67,14 +75,14 @@ export const socialSidebarItems: SocialSidebarItem[] = [
     icon: "twitter",
     colorClass: "bg-[#111111]",
   },
-  {
-    key: "news",
-    label: "News",
-    subtitle: "Latest Announcements",
-    href: "/notifications",
-    icon: "newspaper",
-    colorClass: "bg-primary",
-  },
+  // {
+  //   key: "news",
+  //   label: "News",
+  //   subtitle: "Latest Announcements",
+  //   href: "/notifications",
+  //   icon: "newspaper",
+  //   colorClass: "bg-primary",
+  // },
   {
     key: "email",
     label: "Email",
@@ -83,12 +91,12 @@ export const socialSidebarItems: SocialSidebarItem[] = [
     icon: "mail",
     colorClass: "bg-neutral-700",
   },
-  {
-    key: "phone",
-    label: "Phone",
-    subtitle: "+92 42 99200192",
-    href: "tel:+924299200192",
-    icon: "phone",
-    colorClass: "bg-neutral-700",
-  },
+  // {
+  //   key: "phone",
+  //   label: "Phone",
+  //   subtitle: "+92 42 99200192",
+  //   href: "tel:+924299200192",
+  //   icon: "phone",
+  //   colorClass: "bg-neutral-700",
+  // },
 ];

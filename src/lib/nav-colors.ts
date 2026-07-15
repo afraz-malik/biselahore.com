@@ -16,7 +16,7 @@ export const navColorClasses: Record<NavColor, string> = {
 /** Group → color for Quick Access mega menu section headings/tiles. */
 export const utilityGroupColors: Record<string, NavColor> = {
   "Student Tools": "amber",
-  "Results & Records": "emerald",
+  "Results & Records": "blue",
   "Institutions & Careers": "sky",
-  "Reports & Media": "violet",
+  "Reports & Media": "cyan",
 };

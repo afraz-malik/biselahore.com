@@ -49,12 +49,12 @@ function StatCard({ stat }: { stat: GlanceStat }) {
       variants={cardVariants}
       whileHover={{ y: -4 }}
       transition={{ type: "spring", stiffness: 300, damping: 22 }}
-      className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/6 p-5 shadow-lg shadow-black/20 backdrop-blur-xl transition-colors duration-300 hover:border-emerald-300/40 hover:bg-white/9 hover:shadow-2xl hover:shadow-emerald-500/10"
+      className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/8 p-5 shadow-lg shadow-black/20 backdrop-blur-xl transition-colors duration-300 hover:border-sky-300/40 hover:bg-white/12 hover:shadow-2xl hover:shadow-sky-500/10"
     >
       <motion.span
         whileHover={{ scale: 1.1 }}
         transition={{ type: "spring", stiffness: 300, damping: 18 }}
-        className="inline-flex size-11 items-center justify-center rounded-xl bg-emerald-400/10 text-emerald-300 ring-1 ring-emerald-300/20"
+        className="inline-flex size-11 items-center justify-center rounded-xl bg-sky-400/10 text-sky-200 ring-1 ring-sky-300/20"
       >
         <Icon className="size-5.5" />
       </motion.span>
@@ -97,7 +97,7 @@ export function BiseAtAGlance() {
   return (
     <section className="relative isolate overflow-hidden bg-surface-brand py-20 md:py-24">
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-[radial-gradient(60%_50%_at_15%_0%,oklch(0.48_0.11_162/0.55)_0%,transparent_60%),radial-gradient(55%_60%_at_100%_100%,oklch(0.6_0.14_163/0.35)_0%,transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(60%_50%_at_15%_0%,oklch(0.6_0.14_241/0.55)_0%,transparent_60%),radial-gradient(55%_60%_at_100%_100%,oklch(0.7_0.12_220/0.35)_0%,transparent_60%)]" />
         <div
           className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-size-[56px_56px] opacity-40 mask-[radial-gradient(ellipse_60%_60%_at_50%_40%,black_40%,transparent_85%)]"
         />
@@ -112,7 +112,7 @@ export function BiseAtAGlance() {
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="mx-auto max-w-2xl text-center"
         >
-          <p className="text-sm font-semibold tracking-[0.08em] text-emerald-300 uppercase">
+          <p className="text-sm font-semibold tracking-[0.08em] text-sky-200 uppercase">
             BISE Lahore
           </p>
           <h2 className="mt-3 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">

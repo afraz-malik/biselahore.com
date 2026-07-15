@@ -39,11 +39,21 @@ export interface NavGroup {
 
 /** Secondary navigation — everything that lives behind the "More" menu. */
 export const primaryNav: (NavLink | NavGroup)[] = [
-  { label: "Home", href: "/", icon: "home", color: "emerald" },
-  { label: "About Us", href: "/about", icon: "info", color: "sky" },
-  { label: "Downloads", href: "/downloads", icon: "download", color: "violet" },
-  { label: "Notifications", href: "/notifications", icon: "bell", color: "rose" },
-  { label: "Contact Us", href: "/contact", icon: "phone", color: "cyan" },
+  { label: "Home", href: "/", icon: "home", color: "sky" },
+  { label: "About Us", href: "/about", icon: "info", color: "blue" },
+  { label: "Downloads", href: "/downloads", icon: "download", color: "cyan" },
+  { label: "Notifications", href: "/notifications", icon: "bell", color: "violet" },
+  { label: "Contact Us", href: "/contact", icon: "phone", color: "sky" },
+  {
+    label: "Administration",
+    icon: "users",
+    color: "amber",
+    items: [
+      { label: "Chairman", href: "/administration/chairman" },
+      { label: "Secretary", href: "/administration/secretary" },
+      { label: "Controller of Examinations", href: "/administration/controller-of-examinations" },
+    ],
+  },
   {
     label: "Term of Deputationists",
     icon: "users",
@@ -54,14 +64,14 @@ export const primaryNav: (NavLink | NavGroup)[] = [
       { label: "CEs", href: "/deputationists/ces" },
     ],
   },
-  { label: "FAQs", href: "/faqs", icon: "help", color: "teal" },
-  { label: "Sitemap", href: "/sitemap", icon: "map", color: "fuchsia" },
+  { label: "FAQs", href: "/faqs", icon: "help", color: "cyan" },
+  { label: "Sitemap", href: "/sitemap", icon: "map", color: "blue" },
 ];
 
 /** Primary, always-visible nav links — the most-used destinations, surfaced directly. */
 export const quickNavLinks: NavLink[] = [
-  { label: "Services", href: "#quick-services", icon: "zap", color: "amber" },
-  { label: "Online Systems", href: "#online-systems", icon: "radio", color: "emerald" },
+  { label: "E-Services", href: "#quick-services", icon: "zap", color: "amber" },
+  { label: "Online Systems", href: "#online-systems", icon: "radio", color: "blue" },
 ];
 
 export function isNavGroup(item: NavLink | NavGroup): item is NavGroup {

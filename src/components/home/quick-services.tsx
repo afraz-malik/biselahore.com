@@ -29,9 +29,10 @@ export function QuickServices() {
     <Section id="quick-services" background="subtle" className="scroll-mt-24">
       <SectionHeading
         eyebrow="Explore"
-        title="Services"
-        description="E-services and record corrections — the most requested student actions, one click away."
+        title="E-Services"
+        description="Fast access to student services, record corrections, and online requests — just one click away."
       />
+      <div className="mt-8 rounded-[2rem] border border-white/70 bg-gradient-to-br from-sky-100/80 via-white/70 to-cyan-100/80 p-4 shadow-[0_20px_60px_-30px_rgba(37,99,235,0.45)] backdrop-blur-sm sm:p-6">
       <motion.div
         initial="hidden"
         whileInView="show"
@@ -40,7 +41,7 @@ export function QuickServices() {
           hidden: {},
           show: { transition: { staggerChildren: 0.05 } },
         }}
-        className="mt-12 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4"
+        className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4"
       >
         {quickServiceCards.map((service, i) => (
           <motion.div
@@ -63,12 +64,13 @@ export function QuickServices() {
                 icon={iconMap[service.icon]}
                 title={service.title}
                 description={service.description}
-                tone={i % 2 === 0 ? "emerald" : "ink"}
+                tone={i % 2 === 0 ? "sky" : "ocean"}
               />
             </Link>
           </motion.div>
         ))}
       </motion.div>
+      </div>
     </Section>
   );
 }

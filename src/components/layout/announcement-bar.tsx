@@ -23,7 +23,7 @@ export function AnnouncementBar() {
   if (dismissed || !lead) return null;
 
   return (
-    <div className="relative border-b border-primary/15 bg-accent/70 text-accent-foreground">
+    <div className="relative border-b border-primary/20 bg-[linear-gradient(90deg,rgba(224,242,254,0.95)_0%,rgba(191,219,254,0.95)_45%,rgba(219,234,254,0.95)_100%)] text-accent-foreground">
       <div className="mx-auto flex max-w-7xl items-center gap-3 px-5 py-3 sm:px-8 lg:px-10 xl:px-12">
         <Megaphone className="hidden size-4.5 shrink-0 text-primary sm:block" />
         <Link

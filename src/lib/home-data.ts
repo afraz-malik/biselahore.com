@@ -198,13 +198,13 @@ export interface GlanceStat {
 /** "BISE at a Glance" — headline scale/credibility numbers. Placeholders pending confirmed figures from the Board. */
 export const glanceStats: GlanceStat[] = [
   { icon: "graduation-cap", value: 1_250_000, suffix: "+", title: "Students Examined", subtitle: "Across SSC & HSSC annually" },
-  { icon: "school", value: 4_200, suffix: "+", title: "Affiliated Institutions", subtitle: "Schools & colleges under BISE Lahore" },
+  { icon: "school", value: 4_775, title: "Affiliated Institutions", subtitle: "Schools & colleges under BISE Lahore" },
+  { icon: "scroll-text", value: 110_371, title: "Teachers in our Databank", subtitle: "Qualified educators on record" },
+  { icon: "award", value: 72, title: "Years of Excellence", subtitle: "Continuous service since 1954" },
+  { icon: "laptop", value: 25, suffix: "+", title: "Online Services", subtitle: "Digital-first student support" },
   { icon: "scroll-text", value: 2_800_000, suffix: "+", title: "Certificates Issued", subtitle: "Since digitization began" },
-  { icon: "map-pin", value: 36, title: "Districts Served", subtitle: "Examination centers province-wide" },
-  { icon: "award", value: 120, suffix: "+", title: "Years of Excellence", subtitle: "A legacy of academic integrity" },
-  { icon: "laptop", value: 15, suffix: "+", title: "Online Services", subtitle: "Digital-first student support" },
-  { icon: "book-open", title: "SSC & HSSC Programs", subtitle: "Full spectrum of board examinations" },
-  { icon: "zap", value: 99.9, decimals: 1, suffix: "%", title: "Portal Availability", subtitle: "Uptime for online systems" },
+  { icon: "zap", value: 99.9, decimals: 1, suffix: "%", title: "Portal Availability", subtitle: "Reliable access for online systems" },
+  { icon: "book-open", value: 35, suffix: "+", title: "SSC & HSSC Programs", subtitle: "Full spectrum of board examinations" },
 ];
 
 export interface LinkColumn {

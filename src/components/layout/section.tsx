@@ -33,7 +33,7 @@ export function Section({
   return (
     <section
       className={cn(
-        "relative isolate overflow-hidden py-20 md:py-28 lg:py-32",
+        "relative isolate overflow-hidden py-10 md:py-12 lg:py-16",
         backgroundStyles[background],
         className,
       )}

@@ -24,7 +24,7 @@ export function PageHeader({ eyebrow, title, description, breadcrumbs }: PageHea
   return (
     <section className="relative isolate overflow-hidden bg-surface-brand py-16 text-surface-brand-foreground md:py-20">
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-[radial-gradient(60%_50%_at_15%_0%,oklch(0.48_0.11_162_/_0.5)_0%,transparent_60%),radial-gradient(55%_60%_at_100%_100%,oklch(0.6_0.14_163_/_0.3)_0%,transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(60%_50%_at_15%_0%,oklch(0.6_0.14_241_/_0.45)_0%,transparent_60%),radial-gradient(55%_60%_at_100%_100%,oklch(0.7_0.12_220_/_0.3)_0%,transparent_60%)]" />
         <div className="absolute inset-0 bg-[linear-gradient(to_right,currentColor_1px,transparent_1px),linear-gradient(to_bottom,currentColor_1px,transparent_1px)] bg-size-[48px_48px] opacity-[0.04]" />
       </div>
 

@@ -74,7 +74,7 @@ export function HeroSlide({ slide, isActive, priority }: HeroSlideProps) {
             </motion.p>
             <motion.h1
               variants={itemVariants}
-              className="mt-5 text-4xl leading-[1.08] font-semibold tracking-tight text-balance sm:text-5xl lg:text-6xl"
+              className="mt-5 text-4xl leading-[1.08] font-bold tracking-tight text-balance sm:text-5xl lg:text-6xl"
             >
               {slide.title}
             </motion.h1>
