@@ -29,7 +29,7 @@ export interface SocialSidebarItem {
 export const socialSidebarItems: SocialSidebarItem[] = [
   {
     key: "live-support",
-    label: "Live Support",
+    label: "AI Chatbot",
     subtitle: "Chat with us",
     href: "https://chatbot.biselahore.com",
     icon: "phone",
