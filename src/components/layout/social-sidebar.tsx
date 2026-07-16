@@ -132,7 +132,7 @@ export function SocialSidebar() {
   return (
     <nav
       aria-label="Social and contact links"
-      className="fixed top-1/2 right-0 z-[9999] flex -translate-y-1/2 flex-col items-end gap-2"
+      className="fixed top-1/2 right-0 z-50 flex -translate-y-1/2 flex-col items-end gap-2"
     >
       {socialSidebarItems.map((item) => (
         <SocialSidebarRow key={item.key} item={item} />

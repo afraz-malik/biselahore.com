@@ -65,7 +65,7 @@ export const primaryNav: (NavLink | NavGroup)[] = [
     ],
   },
   { label: "FAQs", href: "/faqs", icon: "help", color: "cyan" },
-  { label: "Sitemap", href: "/sitemap", icon: "map", color: "blue" },
+  // { label: "Sitemap", href: "/sitemap", icon: "map", color: "blue" },
 ];
 
 /** Primary, always-visible nav links — the most-used destinations, surfaced directly. */

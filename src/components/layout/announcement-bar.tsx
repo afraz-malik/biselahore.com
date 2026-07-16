@@ -24,21 +24,29 @@ export function AnnouncementBar() {
 
   return (
     <div className="relative border-b border-primary/20 bg-[linear-gradient(90deg,rgba(224,242,254,0.95)_0%,rgba(191,219,254,0.95)_45%,rgba(219,234,254,0.95)_100%)] text-accent-foreground">
-      <div className="mx-auto flex max-w-7xl items-center gap-3 px-5 py-3 sm:px-8 lg:px-10 xl:px-12">
+      <div 
+      
+      className="mx-auto flex max-w-7xl items-center gap-3 px-5 py-3 sm:px-8 lg:px-10 xl:px-12">
         <Megaphone className="hidden size-4.5 shrink-0 text-primary sm:block" />
-        <Link
+        {/* <Link
           href={lead.href}
           target={lead.href.startsWith("http") ? "_blank" : undefined}
           rel={lead.href.startsWith("http") ? "noopener noreferrer" : undefined}
           className="min-w-0 flex-1 truncate text-sm font-medium hover:underline"
         >
           {lead.title}
-        </Link>
-        {lead.isNew ? (
-          <Badge className="hidden shrink-0 bg-primary text-primary-foreground sm:inline-flex">
+        </Link> */}
+        <p
+            onClick={() => setOpen(true)}
+        
+        className="min-w-0 cursor-pointer flex-1 truncate text-sm font-medium">Important Announcements
+          &nbsp;&nbsp;
+    <Badge className="hidden shrink-0 bg-primary text-primary-foreground sm:inline-flex">
             New
           </Badge>
-        ) : null}
+
+        </p>
+
 
         <Sheet open={open} onOpenChange={setOpen}>
           <button

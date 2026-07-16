@@ -51,7 +51,7 @@ export function Footer() {
               { label: "About Us", href: "/about" },
               { label: "Notifications", href: "/notifications" },
               { label: "Contact Us", href: "/contact" },
-              { label: "SiteMap", href: "/sitemap" },
+              // { label: "SiteMap", href: "/sitemap" },
             ].map((item) => (
               <li key={item.href}>
                 <Link

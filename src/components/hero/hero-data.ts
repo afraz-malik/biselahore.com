@@ -22,7 +22,7 @@ export const heroSlides: HeroSlideData[] = [
     title: "Transparent Examinations. Timely Results.",
     description:
       "The official examination board serving millions of students with secure, transparent, and technology-driven examination services.",
-    image: "/hero/slide-examinations.jpg",
+    image: "/hero/slide1.jpg",
     imageAlt: "Rows of empty desks arranged in an examination hall",
     primaryAction: { label: "Explore Services", href: "#quick-services" },
     secondaryAction: { label: "Learn More", href: "/about" },
@@ -38,17 +38,17 @@ export const heroSlides: HeroSlideData[] = [
     primaryAction: { label: "Student Services", href: "/student-services" },
     secondaryAction: { label: "Learn More", href: "/about" },
   },
-  {
-    id: "digital-services",
-    eyebrow: "Online Services",
-    title: "Fast. Secure. Digital.",
-    description:
-      "Access online results, verification services, challans, notifications, and important announcements anytime.",
-    image: "/hero/slide-digital-services.jpg",
-    imageAlt: "A laptop glowing with light in a dark, modern workspace",
-    primaryAction: { label: "Explore Online Services", href: "/online-services" },
-    secondaryAction: { label: "Learn More", href: "/about" },
-  },
+  // {
+  //   id: "digital-services",
+  //   eyebrow: "Online Services",
+  //   title: "Fast. Secure. Digital.",
+  //   description:
+  //     "Access online results, verification services, challans, notifications, and important announcements anytime.",
+  //   image: "/hero/slide-digital-services.jpg",
+  //   imageAlt: "A laptop glowing with light in a dark, modern workspace",
+  //   primaryAction: { label: "Explore Online Services", href: "/online-services" },
+  //   secondaryAction: { label: "Learn More", href: "/about" },
+  // },
   {
     id: "future-of-education",
     eyebrow: "Our Commitment",

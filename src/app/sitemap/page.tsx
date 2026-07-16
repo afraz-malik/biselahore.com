@@ -32,7 +32,7 @@ const siteGroups: { heading: string; links: LinkItem[] }[] = [
       { label: "Notifications", href: "/notifications" },
       { label: "Contact Us", href: "/contact" },
       { label: "FAQs", href: "/faqs" },
-      { label: "Sitemap", href: "/sitemap" },
+      // { label: "Sitemap", href: "/sitemap" },
     ],
   },
   {
