@@ -5,6 +5,7 @@ export interface QuickServiceCard {
   description: string;
   href: string;
   icon: QuickServiceIcon;
+  iconImage: string;
   external?: boolean;
 }
 
@@ -19,6 +20,7 @@ export const quickServiceCards: QuickServiceCard[] = [
     description: "Apply for attestation online",
     href: "https://eportal.biselahore.com/eservices/attestation",
     icon: "stamp",
+    iconImage: "/services/attestation.png",
     external: true,
   },
   {
@@ -26,6 +28,7 @@ export const quickServiceCards: QuickServiceCard[] = [
     description: "Verify records with departments",
     href: "https://eportal.biselahore.com/eservices/verification",
     icon: "badge-check",
+    iconImage: "/services/verification.png",
     external: true,
   },
   {
@@ -33,6 +36,7 @@ export const quickServiceCards: QuickServiceCard[] = [
     description: "Apply for NOC or migration",
     href: "https://eportal.biselahore.com/eservices/noc",
     icon: "arrow-left-right",
+    iconImage: "/services/noc-migration.png",
     external: true,
   },
   {
@@ -40,11 +44,12 @@ export const quickServiceCards: QuickServiceCard[] = [
     description: "Request duplicate documents",
     href: "https://eportal.biselahore.com/eservices/duplicatedocument",
     icon: "copy-check",
+    iconImage: "/services/duplicate.png",
     external: true,
   },
-  { title: "Name Correction", description: "Fix your name on record", href: "https://correction.biselahore.com", icon: "user-pen", external: true },
-  { title: "F-Name Correction", description: "Fix father's name on record", href: "https://correction.biselahore.com", icon: "user-pen", external: true },
-  { title: "D.O.B Correction", description: "Update your date of birth", href: "https://correction.biselahore.com", icon: "user-pen", external: true },
+  { title: "Name Correction", description: "Fix your name on record", href: "https://correction.biselahore.com", icon: "user-pen", iconImage: "/services/name_correction.png", external: true },
+  { title: "F-Name Correction", description: "Fix father's name on record", href: "https://correction.biselahore.com", icon: "user-pen", iconImage: "/services/fname_correction.png", external: true },
+  { title: "D.O.B Correction", description: "Update your date of birth", href: "https://correction.biselahore.com", icon: "user-pen", iconImage: "/services/dob_correction.png", external: true },
 ];
 
 export type UtilityAccessIcon =

@@ -2,27 +2,11 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import {
-  ArrowLeftRight,
-  BadgeCheck,
-  Copy,
-  Stamp,
-  UserPen,
-  type LucideIcon,
-} from "lucide-react";
 
 import { Section } from "@/components/layout/section";
 import { SectionHeading } from "@/components/layout/section-heading";
 import { ServiceCard } from "@/components/home/service-card";
-import { quickServiceCards, type QuickServiceIcon } from "@/lib/home-data";
-
-const iconMap: Record<QuickServiceIcon, LucideIcon> = {
-  stamp: Stamp,
-  "badge-check": BadgeCheck,
-  "arrow-left-right": ArrowLeftRight,
-  "copy-check": Copy,
-  "user-pen": UserPen,
-};
+import { quickServiceCards } from "@/lib/home-data";
 
 export function QuickServices() {
   return (
@@ -61,7 +45,7 @@ export function QuickServices() {
               className="block h-full"
             >
               <ServiceCard
-                icon={iconMap[service.icon]}
+                imageSrc={service.iconImage}
                 title={service.title}
                 description={service.description}
                 tone={i % 2 === 0 ? "sky" : "ocean"}
