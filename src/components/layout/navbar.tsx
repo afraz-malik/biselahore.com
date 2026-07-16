@@ -101,22 +101,22 @@ export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border/70 bg-[linear-gradient(95deg,rgba(239,246,255,0.98)_0%,rgba(224,242,254,0.96)_38%,rgba(191,219,254,0.95)_100%)] shadow-[0_10px_35px_-20px_rgba(37,99,235,0.45)] backdrop-blur-md">
-      <Container className="flex h-20 items-center justify-between gap-6 py-3 lg:h-24">
+    <header className="sticky top-0 z-50 border-b border-slate-400/75 bg-[linear-gradient(95deg,rgba(203,213,225,0.97)_0%,rgba(147,197,253,0.93)_45%,rgba(186,230,253,0.96)_100%)] shadow-[0_10px_35px_-20px_rgba(30,64,175,0.42)] backdrop-blur-md">
+      <Container className="flex h-20 items-center justify-between gap-6 py-3 text-slate-900 lg:h-24">
         <Link href="/" className="flex items-center gap-3.5 shrink-0">
           <Image
-            src="/brand/bise-logo.png"
+            src="/brand/BISE_Logo_S.png"
             alt="BISE Lahore crest"
-            width={56}
-            height={66}
-            className="h-12 w-auto lg:h-14"
+            width={62}
+            height={73}
+            className="h-[3.3rem] w-auto brightness-[0.55] contrast-125 saturate-75 lg:h-[3.85rem]"
             priority
           />
           <span className="flex flex-col leading-tight">
-            <span className="text-lg font-semibold tracking-tight sm:text-xl">
+            <span className="text-[23px] font-semibold tracking-tight text-slate-900 sm:text-[30px]">
               BISE Lahore
             </span>
-            <span className="hidden text-sm text-muted-foreground sm:block">
+            <span className="hidden text-sm text-slate-700 sm:block sm:text-[18px]">
               Board of Intermediate &amp; Secondary Education
             </span>
           </span>
@@ -129,7 +129,7 @@ export function Navbar() {
               variant="ghost"
               nativeButton={false}
               render={<Link href={item.href} />}
-              className="gap-2 text-base font-medium text-foreground/80 hover:text-foreground"
+              className="gap-2 text-base font-medium text-slate-800 transition-colors hover:bg-white/75 hover:text-slate-950"
             >
               <ColoredIcon icon={item.icon!} color={item.color!} />
               {item.label}
@@ -151,13 +151,14 @@ export function Navbar() {
                 <Input
                   autoFocus={searchOpen}
                   placeholder="Search the site…"
-                  className="h-11 w-64 text-base"
+                  className="h-11 w-64 border-slate-400/80 bg-white/85 text-base text-slate-900 placeholder:text-slate-600"
                 />
               </div>
             </div>
             <Button
               variant="ghost"
               size="icon-lg"
+              className="text-slate-800 transition-colors hover:bg-white/75 hover:text-slate-950"
               aria-label={searchOpen ? "Close search" : "Open search"}
               onClick={() => setSearchOpen((v) => !v)}
             >
@@ -175,7 +176,7 @@ export function Navbar() {
                 <Button
                   variant="ghost"
                   size="icon-lg"
-                  className="lg:hidden"
+                  className="text-slate-800 transition-colors hover:bg-white/75 hover:text-slate-950 lg:hidden"
                   aria-label="Open menu"
                 />
               }
@@ -344,7 +345,7 @@ export function Navbar() {
 
       <nav
         aria-label="Secondary"
-        className="hidden border-t border-border/70 bg-secondary/40 lg:block"
+        className="hidden border-t border-slate-400/70 bg-slate-100/85 lg:block"
       >
         <Container className="flex h-11 items-center justify-between gap-1">
           {primaryNav.map((item) =>
@@ -355,7 +356,7 @@ export function Navbar() {
                     <Button
                       variant="ghost"
                       size="sm"
-                      className="gap-1.5 text-sm font-medium text-foreground/75 hover:text-foreground"
+                      className="gap-1.5 text-sm font-medium text-slate-800 transition-colors hover:bg-white/80 hover:text-slate-950"
                     />
                   }
                 >
@@ -367,12 +368,15 @@ export function Navbar() {
                   {item.label}
                   <ChevronDown className="size-3.5 opacity-60" />
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="center" className="min-w-48 p-1.5">
+                <DropdownMenuContent
+                  align="center"
+                  className="min-w-48 border-slate-400/70 bg-white/95 p-1.5 text-slate-900"
+                >
                   {item.items.map((sub) => (
                     <DropdownMenuItem
                       key={sub.href}
                       render={<Link href={sub.href} />}
-                      className="px-2.5 py-2 text-sm"
+                      className="px-2.5 py-2 text-sm text-slate-900 transition-colors hover:bg-slate-200/80 hover:text-slate-950 focus:bg-slate-200/80 focus:text-slate-950"
                     >
                       {sub.label}
                     </DropdownMenuItem>
@@ -386,7 +390,7 @@ export function Navbar() {
                 size="sm"
                 nativeButton={false}
                 render={<Link href={item.href} />}
-                className="gap-1.5 text-sm font-medium text-foreground/75 hover:text-foreground"
+                className="gap-1.5 text-sm font-medium text-slate-800 transition-colors hover:bg-white/80 hover:text-slate-950"
               >
                 <ColoredIcon icon={item.icon!} color={item.color!} size="sm" />
                 {item.label}

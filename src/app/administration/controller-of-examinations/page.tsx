@@ -13,9 +13,9 @@ export default function ControllerOfExaminationsPage() {
       name="Toseef-ur-Rehman"
       title="Controller of Examinations"
       appointment="Controller of Examinations, BISE Lahore"
-      imageSrc="/people/controller.svg"
+      imageSrc="/people/controller.jpg"
       breadcrumbLabel="Controller of Examinations"
-      email="coe@biselahore.com"
+      email="controller@biselahore.com"
       phone="+92 42 99200193"
       message={[
         "The examination wing remains the backbone of the Board’s credibility and public confidence. Every step of the process — from scheduling to result management — is designed to preserve accuracy, fairness, and institutional discipline while serving the needs of thousands of students every year.",

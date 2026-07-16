@@ -13,7 +13,7 @@ export default function ChairmanPage() {
       name="Engr. Dr. Badar-ul-Islam"
       title="Chairman"
       appointment="Chairman, BISE Lahore"
-      imageSrc="/people/chairman.svg"
+      imageSrc="/people/chairman1.jpg"
       breadcrumbLabel="Chairman"
       email="chairman@biselahore.com"
       phone="+92 42 99200191"

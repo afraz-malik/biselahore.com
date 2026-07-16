@@ -19,9 +19,9 @@ export const heroSlides: HeroSlideData[] = [
   {
     id: "examinations",
     eyebrow: "Board of Intermediate & Secondary Education, Lahore",
-    title: "Transparent Examinations. Timely Results.",
+    title: "Your Academic Journey Starts Here.",
     description:
-      "The official examination board serving millions of students with secure, transparent, and technology-driven examination services.",
+    "Admissions, registrations, migration, certificates, and student services — all in one place.",
     image: "/hero/slide1.jpg",
     imageAlt: "Rows of empty desks arranged in an examination hall",
     primaryAction: { label: "Explore Services", href: "#quick-services" },
@@ -30,21 +30,21 @@ export const heroSlides: HeroSlideData[] = [
   {
     id: "student-journey",
     eyebrow: "Student Services",
-    title: "Your Academic Journey Starts Here.",
+    title: "Transparent Examinations. Timely Results.",
     description:
-      "Admissions, registrations, migration, certificates, and student services — all in one place.",
-    image: "/hero/slide-student-journey.jpg",
+    "The official examination board serving millions of students with secure, transparent, and technology-driven examination services.",
+      image: "/hero/slide-examinations.jpg",
     imageAlt: "A modern brick academic building framed by lawns and walkways",
     primaryAction: { label: "Student Services", href: "/student-services" },
     secondaryAction: { label: "Learn More", href: "/about" },
   },
   // {
-  //   id: "digital-services",
-  //   eyebrow: "Online Services",
-  //   title: "Fast. Secure. Digital.",
-  //   description:
-  //     "Access online results, verification services, challans, notifications, and important announcements anytime.",
-  //   image: "/hero/slide-digital-services.jpg",
+    //   id: "digital-services",
+    //   eyebrow: "Online Services",
+    //   title: "Fast. Secure. Digital.",
+    //   description:
+    //     "Access online results, verification services, challans, notifications, and important announcements anytime.",
+    // image: "/hero/slide-student-journey.jpg",
   //   imageAlt: "A laptop glowing with light in a dark, modern workspace",
   //   primaryAction: { label: "Explore Online Services", href: "/online-services" },
   //   secondaryAction: { label: "Learn More", href: "/about" },

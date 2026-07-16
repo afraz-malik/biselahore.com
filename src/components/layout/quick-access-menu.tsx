@@ -62,7 +62,7 @@ export function QuickAccessMenu() {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="h-10 gap-2 rounded-lg px-4 text-base font-medium text-foreground/80 hover:text-foreground">
+          <NavigationMenuTrigger className="h-10 gap-2 rounded-lg px-4 text-base font-medium text-slate-800 transition-colors hover:bg-white/75 hover:text-slate-950 data-[state=open]:bg-white/75 data-[state=open]:text-slate-950">
             <span
               className={cn(
                 "flex size-7 items-center justify-center rounded-md",

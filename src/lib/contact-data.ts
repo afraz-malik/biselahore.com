@@ -12,16 +12,17 @@ export const contactOfficials: ContactOfficial[] = [
   {
     role: "Chairman",
     name: "Engr. Dr. Badar-ul-Islam",
+    photo: "/people/chairman.jpg",
     phone: "+92 42 99200101-102",
     fax: "+92 42 99200113",
-    email: "chairmanbiselahore@yahoo.com",
+    email: "chairman@biselahore.com",
   },
   {
     role: "Secretary",
     name: "Rizwan Nazir",
     photo: "/people/secretary.jpg",
     phone: "+92 42 99200152-153",
-    email: "secretarybiselahore@gmail.com",
+    email: "secretary@biselahore.com",
   },
   {
     role: "Controller",
@@ -29,7 +30,7 @@ export const contactOfficials: ContactOfficial[] = [
     photo: "/people/controller.jpg",
     phone: "+92 42 99200033-34",
     fax: "+92 42 99203251",
-    email: "controllerbiselahore2019@gmail.com",
+    email: "controller@biselahore.com",
   },
 ];
 
