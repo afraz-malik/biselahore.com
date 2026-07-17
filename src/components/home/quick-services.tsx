@@ -47,7 +47,7 @@ export function QuickServices() {
                 imageSrc={service.iconImage}
                 title={service.title}
                 description={service.description}
-                tone={i % 2 === 0 ? "sky" : "ocean"}
+                // tone={i % 2 === 0 ? "sky" : "ocean"}
               />
             </Link>
           </motion.div>
