@@ -59,7 +59,7 @@ export function HeroSlider() {
       onFocus={() => setIsPaused(true)}
       onBlur={handleBlur}
       onKeyDown={handleKeyDown}
-      className="group relative h-[calc(100svh-5rem)] min-h-[560px] w-full overflow-hidden bg-neutral-900 lg:h-[calc(100svh-6rem)]"
+      className="group relative h-[calc(100svh-10rem)] min-h-[560px] w-full overflow-hidden bg-neutral-900 lg:h-[calc(100svh-14rem)]"
     >
       {heroSlides.map((slide, i) => (
         <HeroSlide

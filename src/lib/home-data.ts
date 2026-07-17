@@ -90,12 +90,12 @@ export interface UtilityAccessCard {
 export const utilityQuickAccess: UtilityAccessCard[] = [
   { title: "Track Your Application", description: "Track your application status", href: "https://eportal.biselahore.com/eservices/tracking", icon: "fingerprint", external: true, group: "Student Tools" },
   { title: "Print Challan", description: "Download & print fee challan", href: "http://challan.biselahore.com/", icon: "printer", external: true, group: "Student Tools" },
-  { title: "Duty Orders", description: "Examination duty orders", href: "http://onlineorders.biselahore.com/", icon: "clipboard-list", external: true, group: "Student Tools" },
+  { title: "Duty Orders", description: "Examination duty orders", href: "http://onlineorders.biselahore.com/", icon: "clipboard-list", external: true, group: "Institutions & Careers" },
   { title: "Complaints", description: "Lodge a complaint online", href: "/complaints", icon: "message-warning", group: "Student Tools" },
 
   { title: "Online Results", description: "Check SSC & HSSC results", href: "http://result.biselahore.com/", icon: "graduation-cap", external: true, group: "Results & Records" },
-  { title: "SSC Members", description: "Browse SSC examination members", href: "https://ssc.biselahore.com/", icon: "users", external: true, group: "Results & Records" },
-  { title: "HSSC Members", description: "Browse HSSC examination members", href: "https://hssc.biselahore.com/", icon: "users", external: true, group: "Results & Records" },
+  { title: "SSC Members", description: "Browse SSC examination members", href: "https://ssc.biselahore.com/", icon: "users", external: true, group: "Institutions & Careers" },
+  { title: "HSSC Members", description: "Browse HSSC examination members", href: "https://hssc.biselahore.com/", icon: "users", external: true, group: "Institutions & Careers" },
   { title: "Result Statistics", description: "Board-wide result analytics", href: "/result-statistics", icon: "bar-chart", group: "Results & Records" },
   { title: "Position Holders", description: "Meet our top achievers", href: "https://profiler.biselahore.com/positionholders.aspx", icon: "trophy", external: true, group: "Results & Records" },
   { title: "Model Papers — Matric", description: "Sample papers for SSC", href: "/model-papers/ssc", icon: "file-text", group: "Results & Records" },
@@ -114,8 +114,8 @@ export const utilityQuickAccess: UtilityAccessCard[] = [
     ],
   },
   { title: "Careers", description: "Explore job opportunities", href: "/careers", icon: "briefcase", group: "Institutions & Careers" },
-  { title: "Tenders", description: "View procurement tenders", href: "/tenders", icon: "gavel", group: "Institutions & Careers" },
-  { title: "RTI", description: "Right to Information requests", href: "/rti", icon: "scroll-text", group: "Institutions & Careers" },
+  { title: "Tenders", description: "View procurement tenders", href: "/tenders", icon: "gavel", group: "Reports & Media" },
+  { title: "RTI", description: "Right to Information requests", href: "/rti", icon: "scroll-text", group: "Reports & Media" },
 
   { title: "Photo Gallery", description: "Browse event photos", href: "/gallery", icon: "images", group: "Reports & Media" },
   { title: "Newsletter", description: "Read our latest newsletter", href: "/downloads/newsletter/NL_2025.pdf", icon: "newspaper", group: "Reports & Media" },

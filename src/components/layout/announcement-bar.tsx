@@ -88,7 +88,7 @@ export function AnnouncementBar() {
             </div>
           </SheetContent>
         </Sheet>
-
+{/* 
         <button
           type="button"
           aria-label="Dismiss announcement"
@@ -96,7 +96,7 @@ export function AnnouncementBar() {
           className="shrink-0 rounded-md p-1 text-muted-foreground hover:bg-black/5 hover:text-foreground dark:hover:bg-white/10"
         >
           <X className="size-4" />
-        </button>
+        </button> */}
       </div>
     </div>
   );
