@@ -105,7 +105,7 @@ export function Navbar() {
       <Container className="flex h-20 items-center justify-between gap-6 py-3 text-slate-900 lg:h-24">
         <Link href="/" className="flex items-center gap-3.5 shrink-0">
           <Image
-            src="/brand/BISE_Logo_S.png"
+            src="/brand/BISE_Logo_G.png"
             alt="BISE Lahore crest"
             width={62}
             height={73}

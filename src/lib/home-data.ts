@@ -44,7 +44,7 @@ export const quickServiceCards: QuickServiceCard[] = [
     description: "Request duplicate documents",
     href: "https://eportal.biselahore.com/eservices/duplicatedocument",
     icon: "copy-check",
-    iconImage: "/services/duplicate.png",
+    iconImage: "/services/dup_white.png",
     external: true,
   },
   { title: "Name Correction", description: "Fix your name on record", href: "https://correction.biselahore.com", icon: "user-pen", iconImage: "/services/name_correction.png", external: true },

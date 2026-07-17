@@ -16,7 +16,6 @@ export function QuickServices() {
         title="E-Services"
         description="Fast access to student services, record corrections, and online requests — just one click away."
       />
-      <div className="mt-8 rounded-[2rem] border border-white/70 bg-gradient-to-br from-sky-100/80 via-white/70 to-cyan-100/80 p-4 shadow-[0_20px_60px_-30px_rgba(37,99,235,0.45)] backdrop-blur-sm sm:p-6">
       <motion.div
         initial="hidden"
         whileInView="show"
@@ -54,7 +53,6 @@ export function QuickServices() {
           </motion.div>
         ))}
       </motion.div>
-      </div>
     </Section>
   );
 }
