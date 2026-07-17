@@ -49,15 +49,15 @@ export const heroSlides: HeroSlideData[] = [
   //   primaryAction: { label: "Explore Online Services", href: "/online-services" },
   //   secondaryAction: { label: "Learn More", href: "/about" },
   // },
-  {
-    id: "future-of-education",
-    eyebrow: "Our Commitment",
-    title: "Building the Future of Education.",
-    description:
-      "Supporting schools, colleges, students, and educators across Punjab through trusted examination services.",
-    image: "/hero/slide-future-education.jpg",
-    imageAlt: "Graduates celebrating, throwing their caps into the air outside their academic building",
-    primaryAction: { label: "Latest Notifications", href: "/notifications" },
-    secondaryAction: { label: "Learn More", href: "/about" },
-  },
+  // {
+  //   id: "future-of-education",
+  //   eyebrow: "Our Commitment",
+  //   title: "Building the Future of Education.",
+  //   description:
+  //     "Supporting schools, colleges, students, and educators across Punjab through trusted examination services.",
+  //   image: "/hero/slide-future-education.jpg",
+  //   imageAlt: "Graduates celebrating, throwing their caps into the air outside their academic building",
+  //   primaryAction: { label: "Latest Notifications", href: "/notifications" },
+  //   secondaryAction: { label: "Learn More", href: "/about" },
+  // },
 ];
