@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { Mail, Newspaper, Phone, type LucideIcon } from "lucide-react";
 
@@ -129,6 +130,12 @@ function SocialSidebarRow({ item }: { item: SocialSidebarItem }) {
  * shifting page layout. Populate `socialSidebarItems` to add/remove platforms.
  */
 export function SocialSidebar() {
+  const pathname = usePathname();
+
+  if (pathname !== "/") {
+    return null;
+  }
+
   return (
     <nav
       aria-label="Social and contact links"
