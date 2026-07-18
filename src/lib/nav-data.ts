@@ -41,6 +41,8 @@ export interface NavGroup {
 export const primaryNav: (NavLink | NavGroup)[] = [
   { label: "Home", href: "/", icon: "home", color: "sky" },
   { label: "About Us", href: "/about", icon: "info", color: "blue" },
+  { label: "Online Results", href: "http://result.biselahore.com/", external: true, icon: "radio", color: "blue" },
+  { label: "Print Challan", href: "http://challan.biselahore.com/", external: true, icon: "download", color: "amber" },
   { label: "Downloads", href: "/downloads", icon: "download", color: "cyan" },
   { label: "Notifications", href: "/notifications", icon: "bell", color: "violet" },
   { label: "Contact Us", href: "/contact", icon: "phone", color: "sky" },
@@ -52,16 +54,6 @@ export const primaryNav: (NavLink | NavGroup)[] = [
       { label: "Chairman", href: "/administration/chairman" },
       { label: "Secretary", href: "/administration/secretary" },
       { label: "Controller of Examinations", href: "/administration/controller-of-examinations" },
-    ],
-  },
-  {
-    label: "Term of Deputationists",
-    icon: "users",
-    color: "amber",
-    items: [
-      { label: "Chairmen", href: "/deputationists/chairmen" },
-      { label: "Secretaries", href: "/deputationists/secretaries" },
-      { label: "CEs", href: "/deputationists/ces" },
     ],
   },
   { label: "FAQs", href: "/faqs", icon: "help", color: "cyan" },

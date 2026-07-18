@@ -83,7 +83,7 @@ export interface UtilityAccessCard {
   group: UtilityAccessGroup;
   external?: boolean;
   /** For items that expand to more than one destination (legacy "flip card"). */
-  children?: { label: string; href: string }[];
+  children?: { label: string; href: string; external?: boolean }[];
 }
 
 /** "Utilities / Quick Access" — every other board utility and service link, grouped for the nav mega menu. */
@@ -119,6 +119,18 @@ export const utilityQuickAccess: UtilityAccessCard[] = [
 
   { title: "Photo Gallery", description: "Browse event photos", href: "/gallery", icon: "images", group: "Reports & Media" },
   { title: "Newsletter", description: "Read our latest newsletter", href: "/downloads/newsletter/NL_2025.pdf", icon: "newspaper", group: "Reports & Media" },
+  {
+    title: "Term of Deputationists",
+    description: "Former chairmen, secretaries, and CEs",
+    href: "/deputationists/chairmen",
+    icon: "users",
+    group: "Reports & Media",
+    children: [
+      { label: "Chairmen", href: "/deputationists/chairmen" },
+      { label: "Secretaries", href: "/deputationists/secretaries" },
+      { label: "CEs", href: "/deputationists/ces" },
+    ],
+  },
 ];
 
 export interface ActiveSystemLink {

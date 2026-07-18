@@ -36,14 +36,6 @@ const siteGroups: { heading: string; links: LinkItem[] }[] = [
     ],
   },
   {
-    heading: "Term of Deputationists",
-    links: [
-      { label: "Chairmen", href: "/deputationists/chairmen" },
-      { label: "Secretaries", href: "/deputationists/secretaries" },
-      { label: "CEs", href: "/deputationists/ces" },
-    ],
-  },
-  {
     heading: "Services",
     links: [
       { label: "Complaints", href: "/complaints" },
