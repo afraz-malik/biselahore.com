@@ -107,8 +107,8 @@ export function Navbar() {
           <Image
             src="/brand/BISE_Logo_G.png"
             alt="BISE Lahore crest"
-            width={62}
-            height={73}
+            width={40}
+            height={50}
             className="h-[3.3rem] w-auto brightness-[0.55] contrast-125 saturate-75 lg:h-[3.85rem]"
             priority
           />

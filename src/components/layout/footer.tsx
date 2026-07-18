@@ -14,7 +14,7 @@ export function Footer() {
         <div className="max-w-sm">
           <Link href="/" className="flex items-center gap-3.5">
             <Image
-              src="/brand/BISE_Logo_G.png"
+              src="/brand/BISE_LogoF.png"
               alt="BISE Lahore crest"
               width={48}
               height={57}
