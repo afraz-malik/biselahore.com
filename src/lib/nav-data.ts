@@ -62,8 +62,8 @@ export const primaryNav: (NavLink | NavGroup)[] = [
 
 /** Primary, always-visible nav links — the most-used destinations, surfaced directly. */
 export const quickNavLinks: NavLink[] = [
-  { label: "E-Services", href: "#quick-services", icon: "zap", color: "amber" },
-  { label: "Online Systems", href: "#online-systems", icon: "radio", color: "blue" },
+  { label: "E-Services", href: "/#quick-services", icon: "zap", color: "amber" },
+  { label: "Online Systems", href: "/#online-systems", icon: "radio", color: "blue" },
 ];
 
 export function isNavGroup(item: NavLink | NavGroup): item is NavGroup {
