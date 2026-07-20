@@ -41,8 +41,8 @@ export interface NavGroup {
 export const primaryNav: (NavLink | NavGroup)[] = [
   { label: "Home", href: "/", icon: "home", color: "sky" },
   { label: "About Us", href: "/about", icon: "info", color: "blue" },
-  { label: "Online Results", href: "http://result.biselahore.com/", external: true, icon: "radio", color: "blue" },
-  { label: "Print Challan", href: "http://challan.biselahore.com/", external: true, icon: "download", color: "amber" },
+  // { label: "Online Results", href: "http://result.biselahore.com/", external: true, icon: "radio", color: "blue" },
+  // { label: "Print Challan", href: "http://challan.biselahore.com/", external: true, icon: "download", color: "amber" },
   { label: "Downloads", href: "/downloads", icon: "download", color: "cyan" },
   { label: "Notifications", href: "/notifications", icon: "bell", color: "violet" },
   { label: "Contact Us", href: "/contact", icon: "phone", color: "sky" },
