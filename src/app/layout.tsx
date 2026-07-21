@@ -6,6 +6,7 @@ import { AnnouncementBar } from "@/components/layout/announcement-bar";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { SocialSidebar } from "@/components/layout/social-sidebar";
+import { LegacySiteButton } from "@/components/layout/legacy-site-button";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -44,6 +45,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <SocialSidebar />
+        <LegacySiteButton />
       </body>
     </html>
   );
