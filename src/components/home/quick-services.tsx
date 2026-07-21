@@ -24,9 +24,9 @@ export function QuickServices() {
           hidden: {},
           show: { transition: { staggerChildren: 0.05 } },
         }}
-        className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4"
+        className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4"
       >
-        {quickServiceCards.map((service, i) => (
+        {quickServiceCards.map((service) => (
           <motion.div
             key={service.title}
             variants={{
@@ -44,10 +44,10 @@ export function QuickServices() {
               className="block h-full"
             >
               <ServiceCard
-                imageSrc={service.iconImage}
+                icon={service.icon}
                 title={service.title}
                 description={service.description}
-                // tone={i % 2 === 0 ? "sky" : "ocean"}
+                ctaLabel={service.ctaLabel}
               />
             </Link>
           </motion.div>

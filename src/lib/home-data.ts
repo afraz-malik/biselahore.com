@@ -1,11 +1,18 @@
-export type QuickServiceIcon = "stamp" | "badge-check" | "arrow-left-right" | "copy-check" | "user-pen";
+export type QuickServiceIcon =
+  | "attestation"
+  | "verification"
+  | "migration"
+  | "duplicate"
+  | "name-change"
+  | "father-name"
+  | "dob";
 
 export interface QuickServiceCard {
   title: string;
   description: string;
+  ctaLabel: string;
   href: string;
   icon: QuickServiceIcon;
-  iconImage: string;
   external?: boolean;
 }
 
@@ -16,40 +23,61 @@ export interface QuickServiceCard {
  */
 export const quickServiceCards: QuickServiceCard[] = [
   {
-    title: "Attestation Result Card / Certificate",
-    description: "Apply for attestation online",
+    title: "Attestation",
+    description: "Get your result card or certificate officially attested by BISE Lahore authorities.",
+    ctaLabel: "Learn More",
     href: "https://eportal.biselahore.com/eservices/attestation",
-    icon: "stamp",
-    iconImage: "/services/attestation.png",
+    icon: "attestation",
     external: true,
   },
   {
-    title: "Verification Govt / Semi Govt / Pvt Departments",
-    description: "Verify records with departments",
+    title: "Verification",
+    description: "Official document verification for universities or employer background checks.",
+    ctaLabel: "Verify Now",
     href: "https://eportal.biselahore.com/eservices/verification",
-    icon: "badge-check",
-    iconImage: "/services/verification.png",
+    icon: "verification",
     external: true,
   },
   {
     title: "NOC / Migration",
-    description: "Apply for NOC or migration",
+    description: "Apply for No Objection Certificate or migration between different boards.",
+    ctaLabel: "Apply for NOC",
     href: "https://eportal.biselahore.com/eservices/noc",
-    icon: "arrow-left-right",
-    iconImage: "/services/noc-migration.png",
+    icon: "migration",
     external: true,
   },
   {
-    title: "Duplicate / Triplicate Certificate / Result Card",
-    description: "Request duplicate documents",
+    title: "Duplicate / Triplicate",
+    description: "Re-issuance of lost or damaged certificates, duplicate or triplicate copies.",
+    ctaLabel: "Order Copy",
     href: "https://eportal.biselahore.com/eservices/duplicatedocument",
-    icon: "copy-check",
-    iconImage: "/services/dup_white.png",
+    icon: "duplicate",
     external: true,
   },
-  { title: "Name Correction", description: "Fix your name on record", href: "https://correction.biselahore.com", icon: "user-pen", iconImage: "/services/name_correction.png", external: true },
-  { title: "F-Name Correction", description: "Fix father's name on record", href: "https://correction.biselahore.com", icon: "user-pen", iconImage: "/services/fname_correction.png", external: true },
-  { title: "D.O.B Correction", description: "Update your date of birth", href: "https://correction.biselahore.com", icon: "user-pen", iconImage: "/services/dob_correction.png", external: true },
+  {
+    title: "Name Change",
+    description: "Correction or legal name change updates in the board's permanent records.",
+    ctaLabel: "Update Profile",
+    href: "https://correction.biselahore.com",
+    icon: "name-change",
+    external: true,
+  },
+  {
+    title: "Father's Name Correction",
+    description: "Rectify spelling errors or formal changes to father's name on credentials.",
+    ctaLabel: "Apply Now",
+    href: "https://correction.biselahore.com",
+    icon: "father-name",
+    external: true,
+  },
+  {
+    title: "Date of Birth Correction",
+    description: "Submit evidence for the correction of date of birth in official certificates.",
+    ctaLabel: "Submit Form",
+    href: "https://correction.biselahore.com",
+    icon: "dob",
+    external: true,
+  },
 ];
 
 export type UtilityAccessIcon =
