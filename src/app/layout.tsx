@@ -7,6 +7,7 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { SocialSidebar } from "@/components/layout/social-sidebar";
 import { LegacySiteButton } from "@/components/layout/legacy-site-button";
+import { ChatbotWidget } from "@/components/layout/chatbot-widget";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -46,6 +47,7 @@ export default function RootLayout({
         <Footer />
         <SocialSidebar />
         <LegacySiteButton />
+        <ChatbotWidget />
       </body>
     </html>
   );

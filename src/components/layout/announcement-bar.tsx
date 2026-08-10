@@ -17,7 +17,7 @@ import { cn } from "@/lib/utils";
 
 export function AnnouncementBar() {
   const [dismissed, setDismissed] = useState(false);
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   const [lead, ...rest] = announcements;
 
   if (dismissed || !lead) return null;
