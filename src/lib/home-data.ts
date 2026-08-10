@@ -170,16 +170,18 @@ export interface ActiveSystemLink {
 
 /** Only the currently-live links from the "Online / Active Systems" wall (commented-out legacy entries dropped). */
 export const activeSystems: ActiveSystemLink[] = [
-  { title: "SSC Registration for Second Annual, 2026", href: "https://privatereginter.biselahore.com/", featured: true, description: "Date from 10-07-2026 to 20-08-2026" },
-  { title: "Private Roll No. Slips (11th) First Annual Examination 2026", href: "https://slips_part1.biselahore.com/",  description: "Date from 05-04-2026 to 20-08-2026" },
-  { title: "Regular Roll No. Slips HSSC First Annual Examination 2026", href: "https://regularslipsinter.biselahore.com" ,  description: "Date from 05-04-2026 to 20-08-2026"},
+  
+  { title: "Online Admission SSC (Second Annual) Exam, 2026", href: "https://sscpvt.biselahore.com/", description: "Last Date: 19-08-2026" },
+  { title: "Download Regular Result Cards for SSC (1st Ann.) Exam 2026", href: "https://resultcards.biselahore.com/Login.aspx", description: "" },
+  { title: "Download Private Result Card for SSC (1st Ann.) Exam 2026", href: "http://resultcards.biselahore.com/PrivateResultCard.aspx", description: "" },
+  { title: "Apply for Rechecking for SSC (1st Ann.) Exam 2026", href: "https://rechecking.biselahore.com/", description: "" },
+  { title: "Get Rechecking Date & Time for SSC (1st Ann.) Exam 2026", href: "https://rechecking.biselahore.com/checkstatus.aspx", description: "" },
+  { title: "SSC Enrolment for Second Annual, 2026", href: "https://privatereginter.biselahore.com/", description: "" },
+  { title: "Private Roll No. Slips (11th) First Annual Examination 2026", href: "https://slips_part1.biselahore.com/",  description: "" },
+  { title: "Regular Roll No. Slips HSSC First Annual Examination 2026", href: "https://regularslipsinter.biselahore.com" ,  description: ""},
   { title: "Private Roll No. Slips (12th) 1st Ann. Exam 2026", href: "https://hsscslips.biselahore.com/" },
- 
-  { title: "Regular Registration (9th Class) Session 2026-2028", href: "https://registration.biselahore.com" },
- 
+  { title: "Regular Enrollment (9th Class) Session 2026-2028", href: "https://registration.biselahore.com" },
   { title: "Regular Roll No. Slips SSC Part-I 9th Class (1st Ann.) Exam 2026", href: "https://regularslips.biselahore.com/" },
-  
-  
   { title: "Exam Management / Biometric System", href: "https://ems.biselahore.com/" },
 ];
 
