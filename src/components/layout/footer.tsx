@@ -77,10 +77,6 @@ export function Footer() {
               +92 42 99200192-197
             </li>
             <li className="flex items-center gap-3">
-              <Printer className="size-4.5 shrink-0 text-cyan-200" />
-              +92 42 99200113
-            </li>
-            <li className="flex items-center gap-3">
               <Mail className="size-4.5 shrink-0 text-cyan-200" />
               <a href="mailto:info@biselahore.com" className="transition-all duration-200 hover:text-cyan-100 hover:underline">
                 info@biselahore.com

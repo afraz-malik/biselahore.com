@@ -33,13 +33,13 @@ export default function ContactPage() {
               <p className="text-sm font-medium">{generalInquiry.phone}</p>
             </div>
           </div>
-          <div className="flex items-center gap-3 rounded-2xl border border-border bg-card p-5 shadow-sm">
+          {/* <div className="flex items-center gap-3 rounded-2xl border border-border bg-card p-5 shadow-sm">
             <Printer className="size-5 shrink-0 text-primary" />
             <div>
               <p className="text-xs text-muted-foreground">Fax</p>
               <p className="text-sm font-medium">{generalInquiry.fax}</p>
             </div>
-          </div>
+          </div> */}
           <a
             href={generalInquiry.portalHref}
             target="_blank"
