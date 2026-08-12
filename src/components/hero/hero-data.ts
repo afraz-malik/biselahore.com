@@ -38,26 +38,38 @@ export const heroSlides: HeroSlideData[] = [
     primaryAction: { label: "Student Services", href: "/student-services" },
     secondaryAction: { label: "Learn More", href: "/about" },
   },
-  // {
-    //   id: "digital-services",
-    //   eyebrow: "Online Services",
-    //   title: "Fast. Secure. Digital.",
-    //   description:
-    //     "Access online results, verification services, challans, notifications, and important announcements anytime.",
-    // image: "/hero/slide-student-journey.jpg",
-  //   imageAlt: "A laptop glowing with light in a dark, modern workspace",
-  //   primaryAction: { label: "Explore Online Services", href: "/online-services" },
-  //   secondaryAction: { label: "Learn More", href: "/about" },
-  // },
-  // {
-  //   id: "future-of-education",
-  //   eyebrow: "Our Commitment",
-  //   title: "Building the Future of Education.",
-  //   description:
-  //     "Supporting schools, colleges, students, and educators across Punjab through trusted examination services.",
-  //   image: "/hero/slide-future-education.jpg",
-  //   imageAlt: "Graduates celebrating, throwing their caps into the air outside their academic building",
-  //   primaryAction: { label: "Latest Notifications", href: "/notifications" },
-  //   secondaryAction: { label: "Learn More", href: "/about" },
-  // },
+
+  {
+      id: "digital-services",
+      eyebrow: "Introducing Student Online Systems",
+      title: "Everything You Need, Just a Click Away.",
+      description:
+        "Access essential BISE Lahore services, from Registration & Roll Number Slips to Exam Management all in one convenient digital platform.",
+        image: "/hero/b3_OnlineSystems.jpg",
+    imageAlt: "Online Digital Services for Students",
+    primaryAction: { label: "Explore Online Systems", href: "/#online-services" },
+    secondaryAction: { label: "Learn More", href: "/about" },
+  },
+  {
+    id: "digital chatbot",
+    eyebrow: "Your Online Assistant for Student Services",
+    title: "Introducing BISE Lahore Digital Chatbot.",
+    description:
+      "Get instant answers about BISE Lahore, from Results, Contact Information and Roll Number Slip to Jurisdiction, Board History & more — simply ask the chatbot.",
+    image: "/hero/b4Chatbot.jpg",
+    imageAlt: "A student using a laptop to access the BISE Lahore Digital Chatbot",
+    primaryAction: { label: "Digital Chatbot", href: "/notifications" },
+    secondaryAction: { label: "Learn More", href: "/about" },
+  },
+  {
+    id: "E - Services",
+    eyebrow: "All Student Services in one Convenient Platform",
+    title: "BISE Lahore E-Services.",
+    description:
+      "Access essential online services for Attestation, Verification, NOC / Migration, Duplicate / Triplicate Certificates, Name Change & Corrections - all in one convenient platform.",
+    image: "/hero/b5_eservices.jpg",
+    imageAlt: "All student services in one convenient platform",
+    primaryAction: { label: "E-Services", href: "/notifications" },
+    secondaryAction: { label: "Learn More", href: "/about" },
+  },
 ];

@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
-import { Mail, Newspaper, Phone, type LucideIcon } from "lucide-react";
+import { Bot, Mail, Newspaper, Phone, type LucideIcon } from "lucide-react";
 
 import {
   SocialIcon,
@@ -25,7 +25,8 @@ const brandIcons: readonly SocialSidebarItem["icon"][] = [
   "whatsapp",
 ];
 
-const lucideIconMap: Record<"mail" | "phone" | "newspaper", LucideIcon> = {
+const lucideIconMap: Record<"mail" | "bot" | "phone" | "newspaper", LucideIcon> = {
+  bot: Bot,
   mail: Mail,
   phone: Phone,
   newspaper: Newspaper,
@@ -41,7 +42,7 @@ function ItemIcon({
   if ((brandIcons as string[]).includes(icon)) {
     return <SocialIcon name={icon as SocialIconName} className={className} />;
   }
-  const Icon = lucideIconMap[icon as "mail" | "phone" | "newspaper"];
+  const Icon = lucideIconMap[icon as "mail" | "bot" | "phone" | "newspaper"];
   return <Icon className={className} />;
 }
 

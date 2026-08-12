@@ -6,6 +6,7 @@ export type SocialSidebarIconName =
   | "twitter"
   | "whatsapp"
   | "mail"
+  | "bot"
   | "phone"
   | "newspaper";
 
@@ -27,14 +28,14 @@ export interface SocialSidebarItem {
  * Lahore has no confirmed Instagram account in the source content.
  */
 export const socialSidebarItems: SocialSidebarItem[] = [
-  // {
-  //   key: "live-support",
-  //   label: "AI Chatbot",
-  //   subtitle: "Chat with us",
-  //   href: "https://chatbot.biselahore.com",
-  //   icon: "phone",
-  //   colorClass: "bg-cyan-700",
-  // },
+  {
+    key: "live-support",
+    label: "AI Chatbot",
+    subtitle: "Chat with us",
+    href: "https://chatbot.biselahore.com",
+    icon: "bot",
+    colorClass: "bg-cyan-700",
+  },
   {
     key: "whatsapp",
     label: "WhatsApp",
