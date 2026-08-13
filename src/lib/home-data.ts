@@ -193,17 +193,18 @@ export interface Announcement {
 
 /** Only the currently-live items from the legacy popup (commented-out entries dropped). */
 export const announcements: Announcement[] = [
-  { title: "Private Registration Schedule (9th) for First Annual Exam 2027", href: "/downloads/notifications/admissions/Pvt_RegSch(1stA27).pdf", isNew: true },
-  { title: "SSC Registration for Second Annual, 2026", href: "https://privatereginter.biselahore.com/", isNew: true },
-  { title: "Private Registration Schedule for Second Annual Exam 2026", href: "/downloads/notifications/admissions/Pvt_RegSch(SA26).pdf" },
-  { title: "Revised Regular Registration Schedule 9th Class (Session 2026-28)", href: "/downloads/notifications/admissions/RevRegSch_9th_Regular.pdf" },
-  { title: "Private Roll No. Slips HSSC Part-I (1st Ann.) Exam 2026", href: "http://slips_part1.biselahore.com/" },
-  { title: "Booklet Enrollment / Admission (9th) Session 2026-28", href: "/downloads/notifications/misc/9th_Booklet_Reg_Sess2026-28.pdf" },
-  { title: "Instructions regarding Practical Examination of SSC", href: "/downloads/notifications/examination/Instr_Pr.Exam.pdf" },
-  { title: "Private Roll No. Slips SSC (9th Class) 1st Ann. Exam 2026", href: "https://slips_part1.biselahore.com" },
+  { title: "Admission for SSC (2nd Annual) Examination, 2026", href: "https://sscpvt.biselahore.com", isNew: true },
+  { title: "Download Regular Result Card for SSC (1st Ann.) Exam 2026", href: "https://resultcards.biselahore.com/Login.aspx", isNew: true },
+  { title: "Download Private Result Card for SSC (1st Ann.) Exam 2026", href: "http://resultcards.biselahore.com/PrivateResultCard.aspx" },
+  { title: "Apply for Rechecking SSC (1st Ann.) Exam 2026", href: "https://rechecking.biselahore.com/" },
+  { title: "Get Rechecking Date & Time for SSC (1st Ann.) Exam 2026", href: "https://rechecking.biselahore.com/checkstatus.aspx" },
+  { title: "Private Enrollment (9th Class) for 1st Annual Exam, 2027", href: "https://sscregistration.biselahore.com/" },
+  { title: "SSC Enrollment for Second Annual Examination, 2026", href: "https://privatereginter.biselahore.com/" },
+  { title: "Booklet Enrollment / Admission (9th) Session 2026-28", href: "downloads/notifications/misc/9th_Booklet_Reg_Sess2026-28.pdf" },
   { title: "Newsletter 2025 - Transforming Education", href: "/downloads/newsletter/NL_2025.pdf" },
 ];
 
+		
 export interface NewsItem {
   title: string;
   href: string;
