@@ -35,7 +35,7 @@ export const heroSlides: HeroSlideData[] = [
     "The official examination board serving millions of students with secure, transparent, and technology-driven examination services.",
       image: "/hero/slide-examinations.jpg",
     imageAlt: "A modern brick academic building framed by lawns and walkways",
-    primaryAction: { label: "Student Services", href: "/#quick-services" },
+    primaryAction: { label: "Online Results", href: "https://result.biselahore.com/" },
     secondaryAction: { label: "Learn More", href: "/about" },
   },
 
