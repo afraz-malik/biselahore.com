@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { BotMessageSquare, X } from "lucide-react";
+import { X } from "lucide-react";
 
 const CHATBOT_URL = "https://chatbot.biselahore.com";
 const TOOLTIP_MESSAGES = [
@@ -9,6 +9,27 @@ const TOOLTIP_MESSAGES = [
   "Query your result",
   "Need help with admissions?",
 ];
+
+function RobotFaceIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      className="h-6 w-6"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <rect x="4" y="7" width="16" height="12" rx="3" />
+      <path d="M12 4v3" />
+      <circle cx="9" cy="12" r="1.25" fill="currentColor" stroke="none" />
+      <circle cx="15" cy="12" r="1.25" fill="currentColor" stroke="none" />
+      <path d="M9 16h6" />
+    </svg>
+  );
+}
 
 export function ChatbotWidget() {
   const [isOpen, setIsOpen] = useState(false);
@@ -86,14 +107,14 @@ export function ChatbotWidget() {
       <button
         type="button"
         onClick={() => setIsOpen((value) => !value)}
-        className={`flex h-12 w-12 items-center justify-center rounded-full border border-white/70 text-white shadow-[0_14px_40px_-14px_rgba(2,132,199,0.8)] transition duration-200 hover:scale-[1.03] ${
+        className={`flex h-[42px] w-[42px] items-center justify-center rounded-xl border border-white/70 text-white shadow-[0_14px_40px_-14px_rgba(2,132,199,0.8)] transition duration-200 hover:scale-[1.03] ${
           isOpen
             ? "bg-slate-900"
             : "bg-gradient-to-r from-blue-700 via-sky-700 to-cyan-600"
         }`}
         aria-label={isOpen ? "Close chatbot" : "Open chatbot"}
       >
-        {isOpen ? <X className="h-5 w-5" /> : <BotMessageSquare className="h-5 w-5" />}
+        {isOpen ? <X className="h-5 w-5" /> : <RobotFaceIcon />}
       </button>
     </div>
   );
