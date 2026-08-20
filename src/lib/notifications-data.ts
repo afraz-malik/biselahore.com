@@ -7,6 +7,7 @@ export interface NotificationEntry {
 
 /** Verbatim from the legacy notifications.html (HTML-commented-out/superseded entries dropped), newest first. */
 export const allNotifications: NotificationEntry[] = [
+  { title: "Online Registration / Admission Schedule for Intermediate (11th-Class) Academic Session 2026-28", href: downloadUrl("/downloads/notifications/admissions/2026/RegSch_Inter2026_28.pdf") },
   { title: "Admission Schedule SSC (Second Annual) Examination, 2026", href: downloadUrl("/downloads/notifications/admissions/2026/AdmSch_2ndAnn26.pdf") },
   { title: "Private Registration Schedule (9th Class) for First Annual Examination 2027", href: downloadUrl("/downloads/notifications/admissions/Pvt_RegSch(1stA27).pdf") },
   { title: "Private Registration Schedule for Second Annual Examination 2026", href: downloadUrl("/downloads/notifications/admissions/Pvt_RegSch(SA26).pdf") },
