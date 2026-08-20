@@ -178,6 +178,7 @@ export const activeSystems: ActiveSystemLink[] = [
   { title: "Download Private Result Card for SSC (1st Ann.) Exam 2026", href: "http://resultcards.biselahore.com/PrivateResultCard.aspx", description: "" },
   { title: "Apply for Rechecking for SSC (1st Ann.) Exam 2026", href: "https://rechecking.biselahore.com/", description: "" },
   { title: "Get Rechecking Date & Time for SSC (1st Ann.) Exam 2026", href: "https://rechecking.biselahore.com/checkstatus.aspx", description: "" },
+  { title: "SSC Private Enrolment (9th Class) for 1st Annual Exam, 2027", href: "https://sscregistration.biselahore.com/", description: "" },
   { title: "SSC Enrolment for Second Annual, 2026", href: "https://privatereginter.biselahore.com/", description: "" },
   { title: "Private Roll No. Slips (11th) First Annual Examination 2026", href: "https://slips_part1.biselahore.com/",  description: "" },
   { title: "Regular Roll No. Slips HSSC First Annual Examination 2026", href: "https://regularslipsinter.biselahore.com" ,  description: ""},
