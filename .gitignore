@@ -31,6 +31,7 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # env files (can opt-in for committing if needed)
+.env*.local
 
 # vercel
 .vercel
@@ -38,3 +39,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# CMS databases: production `data/cms.sqlite` is tracked in git.
+# Local/dev copy and SQLite WAL sidecars stay private.
+/data/cms.dev.sqlite
+/data/cms.dev.sqlite-*
+/data/*.sqlite-wal
+/data/*.sqlite-shm
+/data/*.sqlite.bak*
+/data/*-backup-*.sqlite

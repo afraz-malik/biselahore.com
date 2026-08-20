@@ -9,6 +9,12 @@ git pull
 echo "==> Installing dependencies..."
 npm i
 
+echo "==> Applying database migrations (production DB)..."
+NODE_ENV=production npm run db:migrate
+
+echo "==> Seeding database (no-op if already seeded)..."
+NODE_ENV=production npm run db:seed
+
 echo "==> Building..."
 npm run build
 
