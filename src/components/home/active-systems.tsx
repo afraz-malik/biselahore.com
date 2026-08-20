@@ -6,9 +6,9 @@ import { ArrowUpRight } from "lucide-react";
 import { Section } from "@/components/layout/section";
 import { SectionHeading } from "@/components/layout/section-heading";
 import { Badge } from "@/components/ui/badge";
-import { activeSystems } from "@/lib/home-data";
+import type { ActiveSystemLink } from "@/lib/home-data";
 
-export function ActiveSystems() {
+export function ActiveSystems({ activeSystems }: { activeSystems: ActiveSystemLink[] }) {
   return (
     <Section id="online-systems" background="accent" className="scroll-mt-24">
       <SectionHeading

@@ -3,14 +3,16 @@ import type { Metadata } from "next";
 import { PageHeader } from "@/components/layout/page-header";
 import { Section } from "@/components/layout/section";
 import { TenureTable } from "@/components/deputationists/tenure-table";
-import { chairmen } from "@/lib/deputationists-data";
+import { getPublishedDeputationists } from "@/lib/db/queries/deputationists";
 
 export const metadata: Metadata = {
   title: "Chairmen | BISE Lahore",
   description: "Complete list of Chairmen of BISE Lahore since 1955.",
 };
 
-export default function ChairmenPage() {
+export default async function ChairmenPage() {
+  const chairmen = await getPublishedDeputationists("chairmen");
+
   return (
     <>
       <PageHeader

@@ -4,14 +4,16 @@ import { ArrowUpRight } from "lucide-react";
 import { PageHeader } from "@/components/layout/page-header";
 import { Section } from "@/components/layout/section";
 import { Badge } from "@/components/ui/badge";
-import { rtiItems } from "@/lib/rti-data";
+import { getPublishedRtiItems } from "@/lib/db/queries/rti";
 
 export const metadata: Metadata = {
   title: "RTI (Proactive Disclosure) | BISE Lahore",
   description: "Statutory proactive disclosure of information under the Right to Information framework.",
 };
 
-export default function RtiPage() {
+export default async function RtiPage() {
+  const rtiItems = await getPublishedRtiItems();
+
   return (
     <>
       <PageHeader

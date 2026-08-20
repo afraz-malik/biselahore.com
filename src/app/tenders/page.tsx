@@ -3,14 +3,16 @@ import type { Metadata } from "next";
 import { PageHeader } from "@/components/layout/page-header";
 import { Section } from "@/components/layout/section";
 import { DownloadList } from "@/components/downloads/download-list";
-import { tenderNotices } from "@/lib/tenders-data";
+import { getPublishedTenders } from "@/lib/db/queries/tenders";
 
 export const metadata: Metadata = {
   title: "Tenders | BISE Lahore",
   description: "Current procurement tender notices from BISE Lahore.",
 };
 
-export default function TendersPage() {
+export default async function TendersPage() {
+  const tenderNotices = await getPublishedTenders();
+
   return (
     <>
       <PageHeader

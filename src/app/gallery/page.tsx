@@ -3,14 +3,16 @@ import type { Metadata } from "next";
 import { PageHeader } from "@/components/layout/page-header";
 import { Section } from "@/components/layout/section";
 import { GalleryGrid } from "@/components/gallery/gallery-grid";
-import { galleryAlbums } from "@/lib/gallery-data";
+import { getPublishedGalleryAlbums } from "@/lib/db/queries/gallery";
 
 export const metadata: Metadata = {
   title: "Photo Gallery | BISE Lahore",
   description: "Photos from BISE Lahore events, ceremonies, and board activities.",
 };
 
-export default function GalleryPage() {
+export default async function GalleryPage() {
+  const galleryAlbums = await getPublishedGalleryAlbums();
+
   return (
     <>
       <PageHeader

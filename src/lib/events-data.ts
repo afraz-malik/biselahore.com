@@ -18,8 +18,8 @@ export const latestEvent: EventEntry = {
     images: Array.from({ length: 23 }, (_, i) => {
       const n = String(i + 1).padStart(2, "0");
       return {
-        full: `/events/SSCA19_${n}.JPG`,
-        thumb: `/events/SSCA19_${n}.JPG`,
+        full: `https://data.biselahore.com/dt/events/SSCA19_${n}.JPG`,
+        thumb: `https://data.biselahore.com/dt/events/SSCA19_${n}.JPG`,
         alt: `Medal Awarding Ceremony — photo ${i + 1}`,
       };
     }),

@@ -3,14 +3,16 @@ import type { Metadata } from "next";
 import { PageHeader } from "@/components/layout/page-header";
 import { Section } from "@/components/layout/section";
 import { TenureTable } from "@/components/deputationists/tenure-table";
-import { controllers } from "@/lib/deputationists-data";
+import { getPublishedDeputationists } from "@/lib/db/queries/deputationists";
 
 export const metadata: Metadata = {
   title: "Controllers of Examination | BISE Lahore",
   description: "Complete list of Controllers of Examination (CEs) of BISE Lahore since 1958.",
 };
 
-export default function ControllersPage() {
+export default async function ControllersPage() {
+  const controllers = await getPublishedDeputationists("ces");
+
   return (
     <>
       <PageHeader

@@ -3,14 +3,16 @@ import type { Metadata } from "next";
 import { PageHeader } from "@/components/layout/page-header";
 import { Section } from "@/components/layout/section";
 import { NotificationBrowser } from "@/components/notifications/notification-browser";
-import { allNotifications } from "@/lib/notifications-data";
+import { getPublishedNotifications } from "@/lib/db/queries/notifications";
 
 export const metadata: Metadata = {
   title: "Notifications | BISE Lahore",
   description: "All notifications, date sheets, admission schedules, and circulars issued by BISE Lahore.",
 };
 
-export default function NotificationsPage() {
+export default async function NotificationsPage() {
+  const items = await getPublishedNotifications();
+
   return (
     <>
       <PageHeader
@@ -20,7 +22,7 @@ export default function NotificationsPage() {
         breadcrumbs={[{ label: "Notifications" }]}
       />
       <Section>
-        <NotificationBrowser items={allNotifications} />
+        <NotificationBrowser items={items} />
       </Section>
     </>
   );

@@ -2,7 +2,8 @@ import { ArrowUpRight } from "lucide-react";
 
 import { Section } from "@/components/layout/section";
 import { SectionHeading } from "@/components/layout/section-heading";
-import { relatedBoards, relatedOrganizations, type NavLinkLike } from "@/lib/home-data";
+import type { NavLinkLike } from "@/lib/home-data";
+import { getPublishedRelatedLinks } from "@/lib/db/queries/home";
 
 function LinkList({ title, links }: { title: string; links: NavLinkLike[] }) {
   return (
@@ -27,13 +28,15 @@ function LinkList({ title, links }: { title: string; links: NavLinkLike[] }) {
   );
 }
 
-export function RelatedLinks() {
+export async function RelatedLinks() {
+  const { boards, organizations } = await getPublishedRelatedLinks();
+
   return (
     <Section background="subtle">
       <SectionHeading eyebrow="Reference" title="Related Links" />
       <div className="mt-12 grid gap-12 sm:grid-cols-2">
-        <LinkList title="Other Education Boards" links={relatedBoards} />
-        <LinkList title="Government & Partner Organizations" links={relatedOrganizations} />
+        <LinkList title="Other Education Boards" links={boards} />
+        <LinkList title="Government & Partner Organizations" links={organizations} />
       </div>
     </Section>
   );

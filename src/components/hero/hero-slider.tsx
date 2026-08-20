@@ -5,12 +5,12 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useReducedMotion } from "framer-motion";
 
 import { HeroSlide } from "@/components/hero/hero-slide";
-import { heroSlides } from "@/components/hero/hero-data";
+import type { HeroSlideData } from "@/components/hero/hero-data";
 import { cn } from "@/lib/utils";
 
 const AUTOPLAY_MS = 6000;
 
-export function HeroSlider() {
+export function HeroSlider({ heroSlides }: { heroSlides: HeroSlideData[] }) {
   const [index, setIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const reduceMotion = useReducedMotion();

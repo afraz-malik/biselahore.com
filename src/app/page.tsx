@@ -8,14 +8,27 @@ import { NewsPreview } from "@/components/home/news-preview";
 import { FacebookFeed } from "@/components/home/facebook-feed";
 import { MapSection } from "@/components/home/map-section";
 import { RelatedLinks } from "@/components/home/related-links";
+import {
+  getPublishedHeroSlides,
+  getPublishedGlanceStats,
+  getPublishedOnlineSystems,
+  getPublishedNewsPreview,
+} from "@/lib/db/queries/home";
 
-export default function Home() {
+export default async function Home() {
+  const [heroSlides, glanceStats, activeSystems, newsPreview] = await Promise.all([
+    getPublishedHeroSlides(),
+    getPublishedGlanceStats(),
+    getPublishedOnlineSystems(),
+    getPublishedNewsPreview(),
+  ]);
+
   return (
     <>
-      <Hero />
+      <Hero heroSlides={heroSlides} />
       <QuickServices />
-      <ActiveSystems />
-      <BiseAtAGlance />
+      <ActiveSystems activeSystems={activeSystems} />
+      <BiseAtAGlance glanceStats={glanceStats} />
       <Section>
         <SectionHeading
           eyebrow="Community"
@@ -23,7 +36,7 @@ export default function Home() {
           description="Recent notices, tenders, and schedule updates from the Board."
         />
         <div className="mt-12 grid gap-7 lg:grid-cols-2">
-          <NewsPreview />
+          <NewsPreview newsPreview={newsPreview} />
           <FacebookFeed />
         </div>
       </Section>

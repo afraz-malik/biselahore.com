@@ -3,14 +3,16 @@ import type { Metadata } from "next";
 import { PageHeader } from "@/components/layout/page-header";
 import { Section } from "@/components/layout/section";
 import { DownloadList } from "@/components/downloads/download-list";
-import { downloadForms } from "@/lib/downloads-data";
+import { getPublishedDownloads } from "@/lib/db/queries/downloads";
 
 export const metadata: Metadata = {
   title: "Downloads | BISE Lahore",
   description: "Forms for corrections, migrations, examination duties, and affiliation — all in one place.",
 };
 
-export default function DownloadsPage() {
+export default async function DownloadsPage() {
+  const items = await getPublishedDownloads();
+
   return (
     <>
       <PageHeader
@@ -20,7 +22,7 @@ export default function DownloadsPage() {
         breadcrumbs={[{ label: "Downloads" }]}
       />
       <Section>
-        <DownloadList items={downloadForms} />
+        <DownloadList items={items} />
       </Section>
     </>
   );

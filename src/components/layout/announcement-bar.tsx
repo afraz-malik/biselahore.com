@@ -12,10 +12,15 @@ import {
   SheetTitle,
   SheetDescription,
 } from "@/components/ui/sheet";
-import { announcements } from "@/lib/home-data";
 import { cn } from "@/lib/utils";
 
-export function AnnouncementBar() {
+export interface AnnouncementBarItem {
+  title: string;
+  href: string;
+  isNew: boolean;
+}
+
+export function AnnouncementBar({ announcements }: { announcements: AnnouncementBarItem[] }) {
   const [dismissed, setDismissed] = useState(false);
   const [open, setOpen] = useState(true);
   const [lead, ...rest] = announcements;

@@ -1,5 +1,3 @@
-import { downloadUrl } from "./downloads-url";
-
 export type QuickServiceIcon =
   | "attestation"
   | "verification"
@@ -195,7 +193,7 @@ export interface Announcement {
 
 /** Only the currently-live items from the legacy popup (commented-out entries dropped). */
 export const announcements: Announcement[] = [
-  { title: "Online Registration / Admission Schedule for Inter (11th-Class) Session 2026-28", href: downloadUrl("/downloads/notifications/admissions/2026/RegSch_Inter2026_28.pdf"), isNew: true },
+  { title: "Online Registration / Admission Schedule for Inter (11th-Class) Session 2026-28", href: "/downloads/notifications/admissions/2026/RegSch_Inter2026_28.pdf", isNew: true },
   { title: "Admission for SSC (2nd Annual) Examination, 2026", href: "https://sscpvt.biselahore.com", isNew: true },
   { title: "Download Regular Result Card for SSC (1st Ann.) Exam 2026", href: "https://resultcards.biselahore.com/Login.aspx", isNew: true },
   { title: "Download Private Result Card for SSC (1st Ann.) Exam 2026", href: "http://resultcards.biselahore.com/PrivateResultCard.aspx" },
@@ -203,7 +201,7 @@ export const announcements: Announcement[] = [
   { title: "Get Rechecking Date & Time for SSC (1st Ann.) Exam 2026", href: "https://rechecking.biselahore.com/checkstatus.aspx" },
   { title: "Private Enrollment (9th Class) for 1st Annual Exam, 2027", href: "https://sscregistration.biselahore.com/" },
   { title: "Booklet Enrollment / Admission (9th) Session 2026-28", href: "downloads/notifications/misc/9th_Booklet_Reg_Sess2026-28.pdf" },
-  { title: "Newsletter 2025 - Transforming Education", href: downloadUrl("/downloads/newsletter/NL_2025.pdf")},
+  { title: "Newsletter 2025 - Transforming Education", href: "/downloads/newsletter/NL_2025.pdf"},
 ];
 
 		

@@ -3,7 +3,8 @@ import { FileText } from "lucide-react";
 
 import { PageHeader } from "@/components/layout/page-header";
 import { Section } from "@/components/layout/section";
-import { resultStats, type ResultLink } from "@/lib/result-stats-data";
+import type { ResultLink } from "@/lib/result-stats-data";
+import { getPublishedResultStats } from "@/lib/db/queries/result-stats";
 
 export const metadata: Metadata = {
   title: "Result Statistics | BISE Lahore",
@@ -27,7 +28,9 @@ function Cell({ link }: { link: ResultLink }) {
   );
 }
 
-export default function ResultStatisticsPage() {
+export default async function ResultStatisticsPage() {
+  const resultStats = await getPublishedResultStats();
+
   return (
     <>
       <PageHeader

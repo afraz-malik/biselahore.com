@@ -17,7 +17,7 @@ import {
 import { cn } from "@/lib/utils";
 import { Container } from "@/components/layout/container";
 import { AnimatedCounter } from "@/components/ui/animated-counter";
-import { glanceStats, type GlanceStat, type GlanceStatIcon } from "@/lib/home-data";
+import type { GlanceStat, GlanceStatIcon } from "@/lib/home-data";
 
 const iconMap: Record<GlanceStatIcon, LucideIcon> = {
   "graduation-cap": GraduationCap,
@@ -93,7 +93,7 @@ function StatCard({ stat }: { stat: GlanceStat }) {
   );
 }
 
-export function BiseAtAGlance() {
+export function BiseAtAGlance({ glanceStats }: { glanceStats: GlanceStat[] }) {
   return (
     <section className="relative isolate overflow-hidden bg-surface-brand py-20 md:py-24">
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">

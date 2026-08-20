@@ -6,14 +6,20 @@ import { PageHeader } from "@/components/layout/page-header";
 import { Section } from "@/components/layout/section";
 import { SectionHeading } from "@/components/layout/section-heading";
 import { MapSection } from "@/components/home/map-section";
-import { contactOfficials, generalInquiry } from "@/lib/contact-data";
+import { getPublishedContactOfficials, getGeneralInquiry } from "@/lib/db/queries/contact";
 
 export const metadata: Metadata = {
   title: "Contact Us | BISE Lahore",
   description: "General inquiries and direct contact details for the Chairman, Secretary, and Controller of Examination at BISE Lahore.",
 };
 
-export default function ContactPage() {
+export default async function ContactPage() {
+  const [contactOfficials, generalInquiry] = await Promise.all([getPublishedContactOfficials(), getGeneralInquiry()]);
+
+  if (!generalInquiry) {
+    return null;
+  }
+
   return (
     <>
       <PageHeader
@@ -60,7 +66,7 @@ export default function ContactPage() {
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {contactOfficials.map((official) => (
             <div
-              key={official.role}
+              key={official.id}
               className="flex flex-col items-center gap-4 rounded-2xl border border-border bg-card p-8 text-center shadow-sm"
             >
               {official.photo ? (

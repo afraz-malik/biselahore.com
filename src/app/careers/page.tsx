@@ -3,18 +3,16 @@ import type { Metadata } from "next";
 import { PageHeader } from "@/components/layout/page-header";
 import { Section } from "@/components/layout/section";
 import { DownloadList } from "@/components/downloads/download-list";
+import { getPublishedCareers } from "@/lib/db/queries/careers";
 
 export const metadata: Metadata = {
   title: "Careers | BISE Lahore",
   description: "Current job openings and application forms at BISE Lahore.",
 };
 
-const openings = [
-  { title: "Applications required for Secrecy Officers (Temporary Basis)", href: "/downloads/careers/Advt._SOs_Matric.pdf" },
-  { title: "Applications Form for Secrecy Officers (Temporary Basis)", href: "/downloads/careers/SO_Matric_Form.pdf" },
-];
+export default async function CareersPage() {
+  const openings = await getPublishedCareers();
 
-export default function CareersPage() {
   return (
     <>
       <PageHeader

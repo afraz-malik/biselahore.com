@@ -3,10 +3,10 @@
 import { useEffect, useRef, type WheelEvent } from "react";
 import { ArrowUpRight, AlertCircle } from "lucide-react";
 
-import { newsPreview } from "@/lib/home-data";
+import type { NewsItem } from "@/lib/home-data";
 import { cn } from "@/lib/utils";
 
-export function NewsPreview() {
+export function NewsPreview({ newsPreview }: { newsPreview: NewsItem[] }) {
   const trackRef = useRef<HTMLDivElement>(null);
   const listRef = useRef<HTMLUListElement>(null);
   const offsetRef = useRef(0);

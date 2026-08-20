@@ -3,14 +3,16 @@ import type { Metadata } from "next";
 import { PageHeader } from "@/components/layout/page-header";
 import { Section } from "@/components/layout/section";
 import { DownloadList } from "@/components/downloads/download-list";
-import { sscModelPapers } from "@/lib/model-papers-data";
+import { getPublishedModelPapers } from "@/lib/db/queries/model-papers";
 
 export const metadata: Metadata = {
   title: "Matric Model Papers | BISE Lahore",
   description: "Model papers for SSC (Matric) 9th and 10th class.",
 };
 
-export default function SscModelPapersPage() {
+export default async function SscModelPapersPage() {
+  const sscModelPapers = await getPublishedModelPapers("ssc");
+
   return (
     <>
       <PageHeader

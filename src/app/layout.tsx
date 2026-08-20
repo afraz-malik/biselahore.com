@@ -2,12 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 
-import { AnnouncementBar } from "@/components/layout/announcement-bar";
-import { Navbar } from "@/components/layout/navbar";
-import { Footer } from "@/components/layout/footer";
-import { SocialSidebar } from "@/components/layout/social-sidebar";
-import { LegacySiteButton } from "@/components/layout/legacy-site-button";
-import { ChatbotWidget } from "@/components/layout/chatbot-widget";
+import { SiteChrome } from "@/components/layout/site-chrome";
+import { AnnouncementBarLoader } from "@/components/layout/announcement-bar-loader";
+import { SocialSidebarLoader } from "@/components/layout/social-sidebar-loader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,13 +38,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${poppins.variable} ${geistMono.variable} antialiased`}
       >
-        <AnnouncementBar />
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
-        <SocialSidebar />
-        <LegacySiteButton />
-        <ChatbotWidget />
+        <SiteChrome
+          announcementBar={<AnnouncementBarLoader />}
+          socialSidebar={<SocialSidebarLoader />}
+        >
+          {children}
+        </SiteChrome>
       </body>
     </html>
   );

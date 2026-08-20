@@ -10,11 +10,16 @@ import {
   SocialIcon,
   type SocialIconName,
 } from "@/components/icons/social-icons";
-import {
-  socialSidebarItems,
-  type SocialSidebarItem,
-} from "@/lib/social-sidebar-data";
 import { cn } from "@/lib/utils";
+
+export interface SocialSidebarItem {
+  key: string;
+  label: string;
+  subtitle?: string | null;
+  href: string;
+  icon: "facebook" | "instagram" | "youtube" | "linkedin" | "twitter" | "whatsapp" | "mail" | "bot" | "phone" | "newspaper";
+  colorClass: string;
+}
 
 const brandIcons: readonly SocialSidebarItem["icon"][] = [
   "facebook",
@@ -130,7 +135,7 @@ function SocialSidebarRow({ item }: { item: SocialSidebarItem }) {
  * viewport, vertically centered; expands each row on hover/focus without
  * shifting page layout. Populate `socialSidebarItems` to add/remove platforms.
  */
-export function SocialSidebar() {
+export function SocialSidebar({ items }: { items: SocialSidebarItem[] }) {
   const pathname = usePathname();
 
   if (pathname !== "/") {
@@ -142,7 +147,7 @@ export function SocialSidebar() {
       aria-label="Social and contact links"
       className="fixed top-1/2 right-0 z-50 flex -translate-y-1/2 flex-col items-end gap-2"
     >
-      {socialSidebarItems.map((item) => (
+      {items.map((item) => (
         <SocialSidebarRow key={item.key} item={item} />
       ))}
     </nav>

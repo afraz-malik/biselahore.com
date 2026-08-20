@@ -8,14 +8,16 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { faqs } from "@/lib/faqs-data";
+import { getPublishedFaqs } from "@/lib/db/queries/faqs";
 
 export const metadata: Metadata = {
   title: "FAQs | BISE Lahore",
   description: "Answers to common questions about results, roll number slips, corrections, and other BISE Lahore services.",
 };
 
-export default function FaqsPage() {
+export default async function FaqsPage() {
+  const faqs = await getPublishedFaqs();
+
   return (
     <>
       <PageHeader

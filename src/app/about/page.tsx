@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import { PageHeader } from "@/components/layout/page-header";
 import { Section } from "@/components/layout/section";
-import { aboutSections } from "@/lib/about-data";
+import { getPublishedAboutSections } from "@/lib/db/queries/about";
 
 export const metadata: Metadata = {
   title: "About Us | BISE Lahore",
@@ -10,7 +10,9 @@ export const metadata: Metadata = {
     "Establishment, jurisdiction, administrative structure, vision, and constitution of the Board of Intermediate & Secondary Education, Lahore.",
 };
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const aboutSections = await getPublishedAboutSections();
+
   return (
     <>
       <PageHeader
