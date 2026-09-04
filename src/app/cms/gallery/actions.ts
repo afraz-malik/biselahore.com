@@ -3,7 +3,7 @@
 import { revalidatePath } from "next/cache";
 
 import { requireCmsAuth } from "@/lib/cms/auth/guard";
-import { insertRow, updateRow, deleteRow, togglePublished, reorderRow } from "@/lib/cms/mutations";
+import { insertRowAtTop, updateRow, deleteRow, togglePublished, reorderRow } from "@/lib/cms/mutations";
 import { galleryAlbumSchema, galleryImageSchema } from "@/lib/cms/schemas";
 import { galleryAlbums, galleryImages } from "@/lib/db/schema";
 import { db } from "@/lib/db/client";
@@ -16,7 +16,7 @@ function revalidate() {
 export async function createGalleryAlbum(values: unknown): Promise<void> {
   await requireCmsAuth();
   const data = galleryAlbumSchema.parse(values);
-  insertRow(galleryAlbums, data);
+  insertRowAtTop(galleryAlbums, data);
   revalidate();
 }
 
@@ -48,7 +48,7 @@ export async function reorderGalleryAlbum(id: number, direction: "up" | "down"):
 export async function createGalleryImage(values: unknown): Promise<void> {
   await requireCmsAuth();
   const data = galleryImageSchema.parse(values);
-  insertRow(galleryImages, data);
+  insertRowAtTop(galleryImages, data, { column: galleryImages.albumId, value: data.albumId });
   revalidate();
 }
 

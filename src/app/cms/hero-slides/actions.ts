@@ -3,7 +3,7 @@
 import { revalidatePath } from "next/cache";
 
 import { requireCmsAuth } from "@/lib/cms/auth/guard";
-import { insertRow, updateRow, deleteRow, togglePublished, reorderRow } from "@/lib/cms/mutations";
+import { insertRowAtTop, updateRow, deleteRow, togglePublished, reorderRow } from "@/lib/cms/mutations";
 import { heroSlideSchema } from "@/lib/cms/schemas";
 import { heroSlides } from "@/lib/db/schema";
 
@@ -14,7 +14,7 @@ function revalidate() {
 export async function createHeroSlide(values: unknown): Promise<void> {
   await requireCmsAuth();
   const data = heroSlideSchema.parse(values);
-  insertRow(heroSlides, data);
+  insertRowAtTop(heroSlides, data);
   revalidate();
 }
 

@@ -3,7 +3,7 @@
 import { revalidatePath } from "next/cache";
 
 import { requireCmsAuth } from "@/lib/cms/auth/guard";
-import { insertRow, updateRow, deleteRow, togglePublished, reorderRow } from "@/lib/cms/mutations";
+import { insertRowAtTop, updateRow, deleteRow, togglePublished, reorderRow } from "@/lib/cms/mutations";
 import { careerSchema } from "@/lib/cms/schemas";
 import { careers } from "@/lib/db/schema";
 
@@ -14,7 +14,7 @@ function revalidate() {
 export async function createCareer(values: unknown): Promise<void> {
   await requireCmsAuth();
   const data = careerSchema.parse(values);
-  insertRow(careers, data);
+  insertRowAtTop(careers, data);
   revalidate();
 }
 

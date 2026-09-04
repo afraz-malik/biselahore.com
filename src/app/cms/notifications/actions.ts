@@ -3,7 +3,7 @@
 import { revalidatePath } from "next/cache";
 
 import { requireCmsAuth } from "@/lib/cms/auth/guard";
-import { insertRow, updateRow, deleteRow, togglePublished, reorderRow } from "@/lib/cms/mutations";
+import { insertRowAtTop, updateRow, deleteRow, togglePublished, reorderRow } from "@/lib/cms/mutations";
 import { notificationSchema } from "@/lib/cms/schemas";
 import { notifications } from "@/lib/db/schema";
 
@@ -14,7 +14,7 @@ function revalidate() {
 export async function createNotification(values: unknown): Promise<void> {
   await requireCmsAuth();
   const data = notificationSchema.parse(values);
-  insertRow(notifications, data);
+  insertRowAtTop(notifications, data);
   revalidate();
 }
 

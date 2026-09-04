@@ -3,7 +3,7 @@
 import { revalidatePath } from "next/cache";
 
 import { requireCmsAuth } from "@/lib/cms/auth/guard";
-import { insertRow, updateRow, deleteRow, togglePublished, reorderRow } from "@/lib/cms/mutations";
+import { insertRowAtTop, updateRow, deleteRow, togglePublished, reorderRow } from "@/lib/cms/mutations";
 import { onlineSystemSchema } from "@/lib/cms/schemas";
 import { onlineSystems } from "@/lib/db/schema";
 
@@ -14,7 +14,7 @@ function revalidate() {
 export async function createOnlineSystem(values: unknown): Promise<void> {
   await requireCmsAuth();
   const data = onlineSystemSchema.parse(values);
-  insertRow(onlineSystems, data);
+  insertRowAtTop(onlineSystems, data);
   revalidate();
 }
 

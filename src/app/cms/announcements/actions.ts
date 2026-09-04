@@ -3,7 +3,7 @@
 import { revalidatePath } from "next/cache";
 
 import { requireCmsAuth } from "@/lib/cms/auth/guard";
-import { insertRow, updateRow, deleteRow, togglePublished, reorderRow } from "@/lib/cms/mutations";
+import { insertRowAtTop, updateRow, deleteRow, togglePublished, reorderRow } from "@/lib/cms/mutations";
 import { announcementSchema } from "@/lib/cms/schemas";
 import { announcements } from "@/lib/db/schema";
 
@@ -14,7 +14,7 @@ function revalidate() {
 export async function createAnnouncement(values: unknown): Promise<void> {
   await requireCmsAuth();
   const data = announcementSchema.parse(values);
-  insertRow(announcements, data);
+  insertRowAtTop(announcements, data);
   revalidate();
 }
 

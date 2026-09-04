@@ -4,7 +4,7 @@ import { revalidatePath } from "next/cache";
 import { eq } from "drizzle-orm";
 
 import { requireCmsAuth } from "@/lib/cms/auth/guard";
-import { insertRow, updateRow, deleteRow, togglePublished, reorderRow } from "@/lib/cms/mutations";
+import { insertRowAtTop, updateRow, deleteRow, togglePublished, reorderRow } from "@/lib/cms/mutations";
 import { contactOfficialSchema, generalInquirySchema } from "@/lib/cms/schemas";
 import { contactOfficials, generalInquiry } from "@/lib/db/schema";
 import { db } from "@/lib/db/client";
@@ -16,7 +16,7 @@ function revalidate() {
 export async function createContactOfficial(values: unknown): Promise<void> {
   await requireCmsAuth();
   const data = contactOfficialSchema.parse(values);
-  insertRow(contactOfficials, data);
+  insertRowAtTop(contactOfficials, data);
   revalidate();
 }
 

@@ -3,7 +3,7 @@
 import { revalidatePath } from "next/cache";
 
 import { requireCmsAuth } from "@/lib/cms/auth/guard";
-import { insertRow, updateRow, deleteRow, togglePublished, reorderRow } from "@/lib/cms/mutations";
+import { insertRowAtTop, updateRow, deleteRow, togglePublished, reorderRow } from "@/lib/cms/mutations";
 import { deputationistSchema } from "@/lib/cms/schemas";
 import { deputationists } from "@/lib/db/schema";
 
@@ -16,7 +16,7 @@ function revalidate() {
 export async function createDeputationist(values: unknown): Promise<void> {
   await requireCmsAuth();
   const data = deputationistSchema.parse(values);
-  insertRow(deputationists, data);
+  insertRowAtTop(deputationists, data, { column: deputationists.group, value: data.group });
   revalidate();
 }
 

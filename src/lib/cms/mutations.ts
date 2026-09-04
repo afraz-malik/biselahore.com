@@ -1,19 +1,41 @@
 import "server-only";
 
-import { asc, eq } from "drizzle-orm";
+import { asc, eq, sql } from "drizzle-orm";
 import type { AnySQLiteColumn, SQLiteTable } from "drizzle-orm/sqlite-core";
 
 import { db } from "@/lib/db/client";
 
 type TableWithId = SQLiteTable & { id: AnySQLiteColumn };
-type SortablePublishable = TableWithId & {
+type Sortable = TableWithId & {
   sortOrder: AnySQLiteColumn;
+};
+type SortablePublishable = Sortable & {
   isPublished: AnySQLiteColumn;
 };
 
 export function insertRow<T extends SQLiteTable>(table: T, values: T["$inferInsert"]): number {
   const result = db.insert(table).values(values).run();
   return Number(result.lastInsertRowid);
+}
+
+export function insertRowAtTop<T extends Sortable>(
+  table: T,
+  values: T["$inferInsert"],
+  scope?: { column: AnySQLiteColumn; value: unknown }
+): number {
+  const bump = db.update(table).set({
+    sortOrder: sql`${table.sortOrder} + 1`,
+  } as Partial<T["$inferInsert"]>);
+
+  if (scope) {
+    bump.where(eq(scope.column, scope.value)).run();
+  } else {
+    bump.run();
+  }
+
+  const rest = { ...values } as T["$inferInsert"] & { sortOrder?: number };
+  delete rest.sortOrder;
+  return insertRow(table, { ...rest, sortOrder: 0 } as T["$inferInsert"]);
 }
 
 export function updateRow<T extends TableWithId>(

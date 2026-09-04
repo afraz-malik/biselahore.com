@@ -3,7 +3,7 @@
 import { revalidatePath } from "next/cache";
 
 import { requireCmsAuth } from "@/lib/cms/auth/guard";
-import { insertRow, updateRow, deleteRow, togglePublished, reorderRow } from "@/lib/cms/mutations";
+import { insertRowAtTop, updateRow, deleteRow, togglePublished, reorderRow } from "@/lib/cms/mutations";
 import { modelPaperSchema } from "@/lib/cms/schemas";
 import { modelPapers } from "@/lib/db/schema";
 
@@ -15,7 +15,7 @@ function revalidate() {
 export async function createModelPaper(values: unknown): Promise<void> {
   await requireCmsAuth();
   const data = modelPaperSchema.parse(values);
-  insertRow(modelPapers, data);
+  insertRowAtTop(modelPapers, data, { column: modelPapers.level, value: data.level });
   revalidate();
 }
 

@@ -3,7 +3,7 @@
 import { revalidatePath } from "next/cache";
 
 import { requireCmsAuth } from "@/lib/cms/auth/guard";
-import { insertRow, updateRow, deleteRow, togglePublished, reorderRow } from "@/lib/cms/mutations";
+import { insertRowAtTop, updateRow, deleteRow, togglePublished, reorderRow } from "@/lib/cms/mutations";
 import { tenderSchema } from "@/lib/cms/schemas";
 import { tenders } from "@/lib/db/schema";
 
@@ -14,7 +14,7 @@ function revalidate() {
 export async function createTender(values: unknown): Promise<void> {
   await requireCmsAuth();
   const data = tenderSchema.parse(values);
-  insertRow(tenders, data);
+  insertRowAtTop(tenders, data);
   revalidate();
 }
 

@@ -105,7 +105,7 @@ export function Navbar() {
       <Container className="flex h-20 items-center justify-between gap-6 py-3 text-slate-900 lg:h-24">
         <Link href="/" className="flex items-center gap-3.5 shrink-0">
           <Image
-            src="/brand/BISE_Logo_G.png"
+            src="https://data.biselahore.com/dt/brand/BISE_Logo_G.png"
             alt="BISE Lahore crest"
             width={40}
             height={50}
@@ -190,7 +190,7 @@ export function Navbar() {
               <SheetHeader>
                 <SheetTitle className="flex items-center gap-2.5 text-left text-lg">
                   <Image
-                    src="/brand/bise-logo.png"
+                    src="https://data.biselahore.com/dt/brand/BISE_Logo_G.png"
                     alt="BISE Lahore crest"
                     width={40}
                     height={47}
