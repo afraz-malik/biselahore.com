@@ -38,7 +38,7 @@ export function SiteChrome({
       <main>{children}</main>
       <Footer />
       {socialSidebar}
-      <LegacySiteButton />
+      {/* <LegacySiteButton /> */}
       <ChatbotWidget />
     </>
   );
